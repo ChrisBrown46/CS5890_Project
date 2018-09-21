@@ -11,6 +11,6 @@ deploy:
   provider: surge
   skip_cleanup: true
   domain: ChrisBrown46.surge.sh
-  project: ./
+  project: ./build/
 on:
   branch: master

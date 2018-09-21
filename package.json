@@ -1,0 +1,34 @@
+{
+  "name": "cs5890_project",
+  "version": "1.0.0",
+  "description": "Project for CS5890.",
+  "main": "index.html",
+  "scripts": {
+    "build": "copyfiles -u 1 src/**/* build/",
+    "prebuild": "npm run clean",
+    "precompile": "npm run clean",
+    "clean": "rimraf dist/*",
+    "pretest": "npm run lint",
+    "test": "mocha test -u bdd -R spec",
+    "lint": "jshint src/js/*.js",
+    "server": "live-server --open='src/html/'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisBrown46/CS5890_Project.git"
+  },
+  "author": "Christopher Brown",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChrisBrown46/CS5890_Project/issues"
+  },
+  "homepage": "https://ChrisBrown46.surge.sh",
+  "devDependencies": {
+    "copyfiles": "^2.1.0",
+    "jshint": "^2.9.6",
+    "live-server": "^1.2.0",
+    "mocha": "^5.2.0",
+    "rimraf": "^2.6.2",
+    "should": "^13.2.3"
+  }
+}
