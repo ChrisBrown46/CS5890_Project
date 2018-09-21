@@ -11,7 +11,7 @@
     "pretest": "npm run lint",
     "test": "mocha test -u bdd -R spec",
     "lint": "jshint src/js/*.js",
-    "server": "live-server --open='src/html/'"
+    "server": "live-server --open='src/'"
   },
   "repository": {
     "type": "git",
