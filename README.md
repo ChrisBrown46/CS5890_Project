@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+## Building this project
+This project uses Travis CI (Continuous Integration) along with GitHub in order to ensure code reviews and clean code. In order to properly use all tools and build this project, you must: 
+  * have npm and node.js installed on your computer
+  * install copyfiles, rimraf, jshint, live-server, and mocha as global npm packages
+  
+To develop the application, start a server in the project root by entering in the terminal "live-server".
 
-You can use the [editor on GitHub](https://github.com/ChrisBrown46/CS5890_Project/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ChrisBrown46/CS5890_Project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Project Layout
+.vscode - includes a settings file to keep styling consistant with those who use VSCode
+build - contains the files for the web server to run the website
+node_modules - contains all locally required node packages
+src - contains the local files used to build the website
+test - contains the files used by Mocha/Should to test the src/javascript files
+\_config.yml - used by GitHub to stylize the readme
+.gitignore - used to ignore relevant files specific to the development machine
+.travis.yml - used by Travis to build the project
+LICENSE - the MIT License
+package-lock.json - used by npm to keep track of node modules needed
+package.json - used by npm to run npm scripts and build the package-lock file
+README - this document
