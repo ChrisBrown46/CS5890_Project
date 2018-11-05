@@ -18,3 +18,17 @@ LICENSE - the MIT License
 package-lock.json - used by npm to keep track of node modules needed
 package.json - used by npm to run npm scripts and build the package-lock file
 README - this document
+
+
+## Project Ideas
+
+Major Battles in WWII (https://www.secondworldwarhistory.com/world-war-2-statistics.php)
+  - timeline at top for battle/year in chron order
+  - casulty count
+  - scrolly telly to go through chronological order of battles
+  - big overview of world
+    - click on battle to go to that scrolly position
+  - semantic zoom into battle region from scrolly telly
+  - left 2/3 will be viz; right 1/3 text
+  - sub bar charts on corners for deaths/wounded/particpants and weapons (tanks/ships/subs)
+  - last part of story will be totals/summary charts
