@@ -1,3 +1,25 @@
-h1 {
-  color: blue;
+html {
+  background-color: #2a2d32;
+
+  color: #fff;
+  font-size: 16px;
+  font-family: serif;
+  font-style: normal;
+  font-weight: 400;
+
+  height: 100%;
+}
+
+body {
+  margin: 0;            /* Reset default margin */
+  padding:0px;
+  overflow:hidden;
+  height: 100%;
+}
+iframe {
+  display: block;       /* iframes are inline by default */
+  background: #000;
+  border: none;         /* Reset default border */
+  height: 100%;
+  width: 100vw;
 }
