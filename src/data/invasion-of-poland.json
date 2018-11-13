@@ -1,0 +1,37 @@
+{
+  "start_date" : "September 1st, 1939",
+  "end_date" : "October 6th, 1939",
+  "description": "There was little that Poland could do to stave off elimination at the hands of the German military invading from the West - to be later joined by the Red Army in the East.",
+  "german_forces": {
+    "divisions": 60,
+    "tanks": 2750,
+    "aircraft": 2315,
+    "artillery": 9000,
+    "soldiers": 1500000,
+    "kia": 16300,
+    "wounded": 30300
+  },
+  "polish_forces": {
+    "divisions": 39,
+    "tanks": 880,
+    "aircraft": 400,
+    "artillery": 4300,
+    "kia": 66000,
+    "wounded": 200000,
+    "pow": 694000
+  },
+  "soviet_forces": {
+    "divisons": 33,
+    "tanks": 4736,
+    "aircraft": 3300,
+    "guns": 5000,
+    "soldiers": 466500,
+    "kia": 5300,
+    "wounded": 2380
+  },
+  "slovakian_forces": {
+    "soldiers": 51300,
+    "kia": 37,
+    "wounded": 114
+  }
+}
