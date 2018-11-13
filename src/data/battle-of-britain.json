@@ -1,0 +1,20 @@
+{
+  "start-date" : "July 10th, 1940",
+  "end-date" : "October 31st, 1940",
+  "description": "The Battle of Britain was Free Europe's last stand against the expanding power of the Axis.",
+  "german-forces": {
+    "aircraft": 2550,
+    "aircraft-lost": 1977,
+    "aircrew-kia": 2585,
+    "aircrew-wounded": 735,
+    "aircrew-pow": 925
+  },
+  "british-forces": {
+    "aircraft": 1963,
+    "aircraft-lost": 1744,
+    "aircrew-kia": 1542,
+    "aircrew-wounded": 422,
+    "civilian-casualties": 14281,
+    "civilian-wounded": 20325
+  }
+}
