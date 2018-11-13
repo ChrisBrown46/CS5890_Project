@@ -1,0 +1,15 @@
+{
+  "start-date" : "September 3rd, 1939",
+  "end-date" : "May 7th, 1945",
+  "description": "Control of the Atlantic shipping lanes was key to both an Allied and an Axis victory - luckily for the Allies, victory smiled upon them.",
+  "german-forces": {
+    "sailors-kia": 30000,
+    "uboats": 783
+  },
+  "allied-forces": {
+    "warships": 175,
+    "merchant-ships": 3500,
+    "sailors-kia": 36200,
+    "merchants-kia": 36000
+  }
+}
