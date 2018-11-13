@@ -1,0 +1,28 @@
+{
+  "start-date" : "December 16th, 1944",
+  "end-date" : "January 25th, 1945",
+  "description": "In one final, desperate gamble of the war, Hitler enacted his Ardennes Offensive and drove a wedge into the Allied lines towards Antwerp - but little else came from the initiative.",
+  "german-forces": {
+    "divisions": 43,
+    "tanks": 2014,
+    "artillery": 4224,
+    "soldiers": 449000,
+    "kia": 12652,
+    "wounded": 38600,
+    "mia": 30582
+  },
+  "american-forces": {
+    "divisions": 32,
+    "tanks": 4428,
+    "artillery": 3181,
+    "soldiers": 705000,
+    "kia": 19000,
+    "wounded": 47500,
+    "mia": 23000
+  },
+  "british-forces": {
+    "soldiers": 111100,
+    "kia": 200,
+    "wounded": 1200
+  }
+}
