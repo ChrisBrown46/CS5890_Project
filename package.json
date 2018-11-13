@@ -8,7 +8,6 @@
     "precompile": "npm run clean",
     "clean": "rimraf dist/*",
     "pretest": "npm run lint",
-    "test": "mocha test -u bdd -R spec",
     "lint": "jshint src/js/*.js",
     "server": "live-server --open='src/'"
   },
@@ -26,8 +25,6 @@
     "copyfiles": "^2.1.0",
     "jshint": "^2.9.6",
     "live-server": "^1.2.0",
-    "mocha": "^5.2.0",
-    "rimraf": "^2.6.2",
-    "should": "^13.2.3"
+    "rimraf": "^2.6.2"
   }
 }
