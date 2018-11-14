@@ -1,5 +1,6 @@
 {
-  "date" : "December 7th, 1941",
+  "start-date" : "December 7th, 1941",
+  "end-date" : "December 7th, 1941",
   "description": "Though the surprise Japanese assault on Pearl Harbor was a success in itself, the overall mission had failed as the American aircraft carriers were not in harbor at the time.",
   "japan-forces": {
     "carriers": 6,

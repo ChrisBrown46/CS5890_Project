@@ -1,15 +1,22 @@
 {
-  "date" : "June 6th, 1944",
+  "start-date" : "June 6th, 1944",
+  "end-date" : "June 6th, 1944",
   "description": "So ended the bloody business of the day when the Allies enacted their brazen plan to take back Europe by way of entry through Northern France.",
-  "german-forces": {
-    "soldiers": 50350,
-    "kia": 9000,
-    "artillery": 170
-  },
   "allied-forces": {
+    "divisions": 10,
     "soldiers": 156000,
-    "kia": 4414,
-    "casualties": 10000,
-    "tanks-lost": 185
+    "aircraft": 11590,
+    "vessels": 6939,
+    "tanks": 3200,
+    "warships": 200,
+    "kia": 3800,
+    "wounded": 6700
+  },
+  "german-forces": {
+    "divisons": 4,
+    "soldiers": 40000,
+    "aircraft": 815,
+    "kia": 1000,
+    "wounded": 9000
   }
 }
