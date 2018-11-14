@@ -9,7 +9,8 @@
     "soldiers": 449000,
     "kia": 12652,
     "wounded": 38600,
-    "mia": 30582
+    "mia": 30582,
+    "casulties": 81834
   },
   "american-forces": {
     "divisions": 32,
@@ -18,11 +19,13 @@
     "soldiers": 705000,
     "kia": 19000,
     "wounded": 47500,
-    "mia": 23000
+    "mia": 23000,
+    "casulties": 89500
   },
   "british-forces": {
     "soldiers": 111100,
     "kia": 200,
-    "wounded": 1200
+    "wounded": 1200,
+    "casulties": 1400
   }
 }

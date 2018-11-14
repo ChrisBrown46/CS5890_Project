@@ -5,15 +5,17 @@
   "german-forces": {
     "aircraft": 2550,
     "aircraft-lost": 1977,
-    "aircrew-kia": 2585,
-    "aircrew-wounded": 735,
-    "aircrew-pow": 925
+    "kia": 2585,
+    "wounded": 735,
+    "pow": 925,
+    "casulties": 3637
   },
   "british-forces": {
     "aircraft": 1963,
     "aircraft-lost": 1744,
-    "aircrew-kia": 1542,
-    "aircrew-wounded": 422,
+    "kia": 1542,
+    "wounded": 422,
+    "casulties": 1984,
     "civilian-casualties": 14281,
     "civilian-wounded": 20325
   }

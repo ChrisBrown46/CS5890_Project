@@ -6,25 +6,24 @@
     "tanks": 100,
     "aircraft": 396,
     "soldiers": 800000,
-    "kia": 20000
+    "casulties": 20000
   },
   "allied-forces": {
+    "countries": [
+      "United Kingdom",
+      "British India",
+      "France",
+      "Morocco",
+      "Poland",
+      "Belgium",
+      "Canada",
+      "Netherlands"
+    ],
+    "tanks": 445,
     "soldiers": 400000,
     "soldiers-evacuated": 338226,
-    "kia": 61774
-  },
-  "british-forces": {
-    "vehicles": 63879,
-    "aircraft": 177,
-    "artillery": 2472,
-    "destroyers": 29,
-    "transport-ships": 89,
-    "soldiers": 466500,
-    "kia": 3500
-  },
-  "french-forces": {
-    "destroyers": 3,
-    "kia": 18000,
-    "pow": 35000
+    "kia": 61774,
+    "wounded": 13053,
+    "casulties": 68000
   }
 }

@@ -4,15 +4,17 @@
   "description": "The Soviet defensive effort frustrated Hitler's attack on Moscow, the capital and largest city of the Soviet Union.",
   "german-forces": {
     "soldiers": 1929406,
-    "total-casualties": 174194,
+    "casualties": 174194,
     "tanks": 2470,
-    "aircraft": 599
+    "aircraft": 599,
+    "artillery": 14000
   },
   "soviet-forces": {
     "soldiers": 1400000,
-    "total-casualties": 1029234,
+    "casualties": 1029234,
     "tanks": 3232,
     "weapons": 7600,
-    "aircraft": 1376
+    "aircraft": 1376,
+    "artillery": 7600
   }
 }

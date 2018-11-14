@@ -2,7 +2,7 @@
   "start-date" : "June 4th, 1942",
   "end-date" : "June 7th, 1942",
   "description": "The strategic Pacific island of Midway became center stage for a complex Japanese Navy initiative to help setup a launch post within reach of Hawaii.",
-  "japan-forces": {
+  "japanese-forces": {
     "carriers": 4,
     "carriers-lost": 4,
     "battleships": 2,
@@ -14,9 +14,10 @@
     "float-aircraft": 16,
     "aircraft-lost":248,
     "kia": 3057,
-    "pow": 37
+    "pow": 37,
+    "casulties": 3094
   },
-  "us-forces": {
+  "american-forces": {
     "carriers": 3,
     "carriers-lost": 1,
     "heavy-cruisers": 7,
@@ -28,6 +29,7 @@
     "aircraft-lost":150,
     "kia": 307,
     "pow": 3,
+    "casulties": 307,
     "submarines": 16
   }
 }
