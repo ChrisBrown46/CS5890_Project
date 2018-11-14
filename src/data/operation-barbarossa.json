@@ -11,9 +11,10 @@
     "mortars": 17081,
     "soldiers": 3800000,
     "kia": 186452,
-    "missing-soldiers": 40157,
-    "wounded-soldiers": 655179,
-    "sick-soldiers": 8000
+    "mia": 40157,
+    "wounded": 655179,
+    "sick": 8000,
+    "casulties": 889788
   },
   "soviet-forces": {
     "aircraft": 9100,
@@ -22,8 +23,9 @@
     "tanks-lost": 20500,
     "soldiers": 2900000,
     "kia": 566852,
-    "missing-soldiers": 2335482,
+    "mia": 2335482,
     "pow": 500000,
-    "wounded-soldiers": 1336147
+    "wounded": 1336147,
+    "casulties": 4738481
   }
 }
