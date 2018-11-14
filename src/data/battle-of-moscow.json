@@ -1,0 +1,18 @@
+{
+  "start-date" : "October 2nd, 1941",
+  "end-date" : "January 7th, 1942",
+  "description": "The Soviet defensive effort frustrated Hitler's attack on Moscow, the capital and largest city of the Soviet Union.",
+  "german-forces": {
+    "soldiers": 1929406,
+    "total-casualties": 174194,
+    "tanks": 2470,
+    "aircraft": 599
+  },
+  "soviet-forces": {
+    "soldiers": 1400000,
+    "total-casualties": 1029234,
+    "tanks": 3232,
+    "weapons": 7600,
+    "aircraft": 1376
+  }
+}
