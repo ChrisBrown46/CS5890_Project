@@ -1,0 +1,29 @@
+{
+  "start-date" : "June 22nd, 1941",
+  "end-date" : "December 5th, 1941",
+  "description": "After military successes throughout Europe, in the Balkans, and on Crete, Hitler's attention inevitably turned to the invasion of the Soviet Union.",
+  "german-forces": {
+    "aircraft": 5369,
+    "aircraft-lost": 2827,
+    "tanks": 3795,
+    "tanks-lost": 2735,
+    "artillery": 23435,
+    "mortars": 17081,
+    "soldiers": 3800000,
+    "kia": 186452,
+    "missing-soldiers": 40157,
+    "wounded-soldiers": 655179,
+    "sick-soldiers": 8000
+  },
+  "soviet-forces": {
+    "aircraft": 9100,
+    "aircraft-lost": 21200,
+    "tanks": 11000,
+    "tanks-lost": 20500,
+    "soldiers": 2900000,
+    "kia": 566852,
+    "missing-soldiers": 2335482,
+    "pow": 500000,
+    "wounded-soldiers": 1336147
+  }
+}
