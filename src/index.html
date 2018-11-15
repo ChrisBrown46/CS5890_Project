@@ -22,7 +22,7 @@
 <body>
 
 	<!-- Top Section Contains Battle Navigation -->
-	<div id="battle-navigation-chart"></div>
+	<div id="battle-navigation-div"></div>
 
 	<div id="visualization-wrapper">
 		<!-- Left Section Contains Visualizations -->
@@ -33,18 +33,7 @@
 		</div>
 		
 		<!-- Right Side Contains ScrollyTelly -->
-		<div data-spy="scroll" data-target="#battle-navigation-chart" data-offset="500" class="scrollspy" id="story">
-			<p class="h1" id="list-item-1"> Battle 1 </p>
-			<p class="h3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique turpis maximus neque pellentesque rhoncus. Suspendisse at vestibulum eros, vel auctor eros. Praesent fringilla consectetur odio non suscipit. Mauris et luctus dui. Nunc et imperdiet augue. Nam id lorem et felis laoreet pretium. In nec risus et nibh ultrices hendrerit eget non velit. Cras eros dui, hendrerit non lobortis ut, tristique id dolor. Quisque turpis nunc, ultrices eu fermentum ultrices, pulvinar eu mi. Etiam ultricies, nulla a malesuada tempor, sapien sapien auctor velit, sed lobortis nunc dui in nunc. Suspendisse ac varius nisl. Fusce viverra sapien id iaculis laoreet. Integer a felis id metus convallis consequat eu ac sapien. </p>
-			<p class="h1" id="list-item-2"> Battle 2 </p>
-			<p class="h3"> Sed ac nulla vel lectus vehicula convallis et in lectus. Ut sollicitudin feugiat sapien at pulvinar. Praesent eget ornare erat. Nunc tristique mauris molestie, gravida felis vulputate, gravida urna. Vivamus elit libero, malesuada eget tristique ut, maximus a lectus. Duis in ipsum diam. Maecenas eget tempor elit, ac efficitur mauris. Maecenas bibendum tortor at bibendum mattis. Donec sagittis lacinia purus quis facilisis. Phasellus non odio at sapien porttitor congue. Mauris aliquam, orci a efficitur iaculis, erat mauris convallis erat, non vestibulum metus lorem id odio. Suspendisse fermentum dictum ex, ut laoreet purus. Sed leo est, tempor et leo eu, luctus feugiat nunc. Donec volutpat dignissim elit at posuere. Cras varius laoreet dui, ut eleifend ligula maximus non. </p>
-			<p class="h1" id="list-item-3"> Battle 3 </p>
-			<p class="h3"> Vivamus mattis turpis id justo ornare rutrum ac bibendum erat. In vel feugiat enim. Nunc erat ex, porta nec nulla vitae, dictum feugiat odio. Integer pretium ultrices eros, in pharetra est pharetra at. Nunc sollicitudin molestie nibh eu efficitur. Morbi cursus sit amet est porta varius. Mauris convallis pulvinar metus vel ultrices. Sed consequat, ante in consectetur tempor, nunc lectus imperdiet felis, et condimentum magna tortor ac felis. </p>
-			<p class="h1" id="list-item-4"> Battle 4 </p>
-			<p class="h3"> Quisque vel ultrices nisi. Vestibulum consectetur enim sed sagittis pellentesque. Quisque a risus scelerisque, tristique lectus sit amet, maximus velit. Sed quis tortor lectus. Nunc pretium scelerisque aliquam. Nullam eget consequat nunc, in gravida ipsum. Quisque id velit in nibh accumsan consectetur. </p>
-			<p class="h1" id="list-item-5"> Battle 5 </p>
-			<p class="h3"> Ut luctus ut sem vitae eleifend. Aliquam ante enim, placerat eget lacinia eu, vestibulum quis neque. Nulla volutpat elementum fermentum. Curabitur id odio ut odio molestie tincidunt non sit amet augue. Aliquam erat volutpat. Etiam diam neque, fringilla in venenatis a, tincidunt eu odio. Fusce at ex leo. Aliquam placerat purus vitae erat maximus finibus in nec augue. </p>
-		</div>
+		<div id="story"></div>
 	</div>
 
 	<!-- Bootstrap JavaScript -->
@@ -53,6 +42,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	
+	<script src="js/waypoints/noframework.waypoints.min.js"></script>
+	<script src="js/storyBuilder.js"></script>
+	<script src="js/waypointBuilder.js"></script>
 	<script src="js/battleNavigationChart.js"></script>
 	<script src="js/script.js"></script>
 

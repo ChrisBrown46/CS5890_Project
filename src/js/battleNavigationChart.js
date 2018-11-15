@@ -5,7 +5,7 @@ class BattleNavigationChart {
 
     // Initializes the svg elements required for this chart
     this.margin = { top: 10, right: 20, bottom: 30, left: 50 };
-    const divBattleChart = d3.select("#battle-navigation-chart");
+    const divBattleChart = d3.select("#battle-navigation-div");
 
     // Fetch the svg bounds
     this.svgBounds = divBattleChart.node().getBoundingClientRect();
@@ -16,14 +16,11 @@ class BattleNavigationChart {
     this.svg = divBattleChart.append("svg")
       .attr("width", this.svgWidth)
       .attr("height", this.svgHeight)
+      .attr("id", "battle-navigation-chart")
       .append("g")
       .attr("transform", "translate(50, 50)");
 
     this.buildChart();
-
-    $('[data-spy="scroll"]').each(function() {
-      const $spy = $(this).scrollspy("refresh");
-    });
   }
 
   buildChart() {
@@ -48,22 +45,14 @@ class BattleNavigationChart {
       .attr("fill", "none");
 
     const battleChartCircles = battleChart
-      .append("a")
-      .attr("href", (_, i) => "#list-item-" + (i + 1))
       .append("circle")
       .attr("cx", (_, i) => scale(i))
       .attr("r", 25)
       .attr("stroke", "#FFFFFF")
       .attr("stroke-width", "2")
-      .attr("fill", "white")
-      .attr("href", (_, i) => "#list-item-" + (i + 1))
-      .attr("class", "list-group-item list-group-item-action");
+      .attr("fill", "white");
   }
 
   update() {
-    d3.selectAll("circle")
-      .attr("fill", "red");
-    d3.selectAll(".active")
-      .attr("fill", "green");
   }
 }
