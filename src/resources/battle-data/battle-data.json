@@ -1,0 +1,363 @@
+[
+  {
+    "battle": "Invasion of Poland",
+    "start-date" : "September 1st, 1939",
+    "end-date" : "October 6th, 1939",
+    "description": "There was little that Poland could do to stave off elimination at the hands of the German military invading from the West - to be later joined by the Red Army in the East.",
+    "german-forces": {
+      "divisions": 60,
+      "tanks": 2750,
+      "aircraft": 2315,
+      "artillery": 9000,
+      "soldiers": 1500000,
+      "kia": 16300,
+      "mia": 3500,
+      "wounded": 30300,
+      "casulties": 50100
+    },
+    "polish-forces": {
+      "divisions": 39,
+      "tanks": 880,
+      "aircraft": 400,
+      "artillery": 4300,
+      "kia": 66000,
+      "wounded": 200000,
+      "pow": 694000,
+      "casulties": 889700
+    },
+    "soviet-forces": {
+      "divisons": 33,
+      "tanks": 4736,
+      "aircraft": 3300,
+      "guns": 5000,
+      "soldiers": 466500,
+      "kia": 1475,
+      "wounded": 2383,
+      "casulties": 5327
+    },
+    "slovakian-forces": {
+      "soldiers": 51306,
+      "kia": 37,
+      "mia": 11,
+      "wounded": 114,
+      "casulties": 162
+    }
+  },
+  {
+    "battle": "Battle of the Atlantic",
+    "start-date" : "September 3rd, 1939",
+    "end-date" : "May 7th, 1945",
+    "description": "Control of the Atlantic shipping lanes was key to both an Allied and an Axis victory - luckily for the Allies, victory smiled upon them.",
+    "axis-forces": {
+      "countries": [
+        "Germany",
+        "Italy"
+      ],
+      "kia": 30500,
+      "casulties": 30500,
+      "submarines-lost": 800
+    },
+    "allied-forces": {
+      "countries": [
+        "United Kingdom",
+        "Canada",
+        "United States",
+        "France",
+        "Free France",
+        "Poland",
+        "Brazil",
+        "Netherlands",
+        "Norway"
+      ],
+      "kia": 36200,
+      "casulties": 36200,
+      "warships-lost": 175,
+      "merchant-ships": 3500,
+      "merchants-kia": 36000
+    }
+  },
+  {
+    "battle": "Dunkirk",
+    "start-date" : "May 27th, 1940",
+    "end-date" : "June 4th, 1940",
+    "description": "Facing annihilation of grand proportions, over 330,000 Allied troops were evacuated from the French port city of Dunkirk and lived to fight another day.",
+    "german-forces": {
+      "tanks": 100,
+      "aircraft": 396,
+      "soldiers": 800000,
+      "casulties": 20000
+    },
+    "allied-forces": {
+      "countries": [
+        "United Kingdom",
+        "British India",
+        "France",
+        "Morocco",
+        "Poland",
+        "Belgium",
+        "Canada",
+        "Netherlands"
+      ],
+      "tanks": 445,
+      "soldiers": 400000,
+      "soldiers-evacuated": 338226,
+      "kia": 61774,
+      "wounded": 13053,
+      "casulties": 68000
+    }
+  },
+  {
+    "battle": "Battle of Britain",
+    "start-date" : "July 10th, 1940",
+    "end-date" : "October 31st, 1940",
+    "description": "The Battle of Britain was Free Europe's last stand against the expanding power of the Axis.",
+    "german-forces": {
+      "aircraft": 2550,
+      "aircraft-lost": 1977,
+      "kia": 2585,
+      "wounded": 735,
+      "pow": 925,
+      "casulties": 3637
+    },
+    "british-forces": {
+      "aircraft": 1963,
+      "aircraft-lost": 1744,
+      "kia": 1542,
+      "wounded": 422,
+      "casulties": 1984,
+      "civilian-casualties": 14281,
+      "civilian-wounded": 20325
+    }
+  },
+  {
+    "battle": "Operation Barbarossa",
+    "start-date" : "June 22nd, 1941",
+    "end-date" : "December 5th, 1941",
+    "description": "After military successes throughout Europe, in the Balkans, and on Crete, Hitler's attention inevitably turned to the invasion of the Soviet Union.",
+    "german-forces": {
+      "aircraft": 5369,
+      "aircraft-lost": 2827,
+      "tanks": 3795,
+      "tanks-lost": 2735,
+      "artillery": 23435,
+      "mortars": 17081,
+      "soldiers": 3800000,
+      "kia": 186452,
+      "mia": 40157,
+      "wounded": 655179,
+      "sick": 8000,
+      "casulties": 889788
+    },
+    "soviet-forces": {
+      "aircraft": 9100,
+      "aircraft-lost": 21200,
+      "tanks": 11000,
+      "tanks-lost": 20500,
+      "soldiers": 2900000,
+      "kia": 566852,
+      "mia": 2335482,
+      "pow": 500000,
+      "wounded": 1336147,
+      "casulties": 4738481
+    }
+  },
+  {
+    "battle": "Battle of Moscow",
+    "start-date" : "October 2nd, 1941",
+    "end-date" : "January 7th, 1942",
+    "description": "The Soviet defensive effort frustrated Hitler's attack on Moscow, the capital and largest city of the Soviet Union.",
+    "german-forces": {
+      "soldiers": 1929406,
+      "casualties": 174194,
+      "tanks": 2470,
+      "aircraft": 599,
+      "artillery": 14000
+    },
+    "soviet-forces": {
+      "soldiers": 1400000,
+      "casualties": 1029234,
+      "tanks": 3232,
+      "weapons": 7600,
+      "aircraft": 1376,
+      "artillery": 7600
+    }
+  },  
+  {
+    "battle": "Pearl Harbor",
+    "start-date" : "December 7th, 1941",
+    "end-date" : "December 7th, 1941",
+    "description": "Though the surprise Japanese assault on Pearl Harbor was a success in itself, the overall mission had failed as the American aircraft carriers were not in harbor at the time.",
+    "japanese-forces": {
+      "carriers": 6,
+      "battleships": 2,
+      "heavy-cruisers": 2,
+      "light-cruisers": 1,
+      "destroyers": 9,
+      "tankers": 8,
+      "submarines": 28,
+      "submarines-lost": 5,
+      "aircraft": 414,
+      "aircraft-lost": 29,
+      "aircraft-damaged": 74,
+      "kia": 64,
+      "pow": 1,
+      "casulties": 65
+    },
+    "american-forces": {
+      "battleships": 8,
+      "battleships-lost": 4,
+      "cruisers": 8,
+      "cruisers-damaged": 3,
+      "destroyers": 30,
+      "destroyers-damaged": 3,
+      "submarines": 4,
+      "other-ships": 47,
+      "other-ships-damaged": 3,
+      "aircraft": 390,
+      "aircraft-lost": 188,
+      "aircraft-damaged": 159,
+      "kia": 2335,
+      "wounded": 1143,
+      "casulties": 3478
+    }
+  },
+  {
+    "battle": "Battle of Midway",
+    "start-date" : "June 4th, 1942",
+    "end-date" : "June 7th, 1942",
+    "description": "The strategic Pacific island of Midway became center stage for a complex Japanese Navy initiative to help setup a launch post within reach of Hawaii.",
+    "japanese-forces": {
+      "carriers": 4,
+      "carriers-lost": 4,
+      "battleships": 2,
+      "heavy-cruisers": 2,
+      "heavy-cruisers-lost": 1,
+      "light-cruisers": 1,
+      "destroyers": 12,
+      "carrier-aircraft": 248,
+      "float-aircraft": 16,
+      "aircraft-lost":248,
+      "kia": 3057,
+      "pow": 37,
+      "casulties": 3094
+    },
+    "american-forces": {
+      "carriers": 3,
+      "carriers-lost": 1,
+      "heavy-cruisers": 7,
+      "light-cruisers": 1,
+      "destroyers": 15,
+      "destroyers-lost": 1,
+      "carrier-aircraft": 233,
+      "land-aircraft": 127,
+      "aircraft-lost":150,
+      "kia": 307,
+      "pow": 3,
+      "casulties": 307,
+      "submarines": 16
+    }
+  },
+  {
+    "battle": "Battle of Stalingrad",
+    "start-date" : "August, 1942",
+    "end-date" : "February 2nd, 1943",
+    "description": "Hitler had to save face and commit thousands of lives to take Stalingrad while the German propaganda machine spewed an imminent victory for the invaders.",
+    "axis-forces": {
+      "countries": [
+        "Germany",
+        "Italy",
+        "Romania",
+        "Hungary",
+        "Hiwi"
+      ],
+      "aircraft": 2332,
+      "tanks": 1000,
+      "artillery": 13250,
+      "soldiers": 1310000,
+      "aircraft-lost": 900,
+      "tanks-lost": 1500,
+      "weapons-lost": 6000,
+      "weapons-captured": 5762,
+      "casulties": 868374
+    },
+    "soviet-forces": {
+      "aircraft": 1415,
+      "tanks": 1294,
+      "artillery": 15651,
+      "soldiers": 1330000,
+      "aircraft-lost": 2769,
+      "tanks-lost": 4341,
+      "weapons-lost": 15728,
+      "kia": 478741,
+      "wounded": 650878,
+      "casulties": 1129619
+    }
+  },
+  {
+    "battle": "D-Day (Normandy)",
+    "start-date" : "June 6th, 1944",
+    "end-date" : "June 6th, 1944",
+    "description": "So ended the bloody business of the day when the Allies enacted their brazen plan to take back Europe by way of entry through Northern France.",
+    "allied-forces": {
+      "countries": [
+        "United Kingdom",
+        "United States",
+        "Canada",
+        "Australia",
+        "Czechoslovakia",
+        "France",
+        "Norway",
+        "Poland"
+      ],
+      "divisions": 10,
+      "soldiers": 156000,
+      "aircraft": 11590,
+      "vessels": 6939,
+      "tanks": 3200,
+      "warships": 200,
+      "kia": 4414,
+      "wounded": 6700,
+      "casulties": 11014
+    },
+    "german-forces": {
+      "divisons": 4,
+      "soldiers": 40000,
+      "aircraft": 815,
+      "kia": 1000,
+      "wounded": 9000,
+      "casulties": 10000
+    }
+  },
+  {
+    "battle": "Battle of the Bulge",
+    "start-date" : "December 16th, 1944",
+    "end-date" : "January 25th, 1945",
+    "description": "In one final, desperate gamble of the war, Hitler enacted his Ardennes Offensive and drove a wedge into the Allied lines towards Antwerp - but little else came from the initiative.",
+    "german-forces": {
+      "divisions": 43,
+      "tanks": 2014,
+      "artillery": 4224,
+      "soldiers": 449000,
+      "kia": 12652,
+      "wounded": 38600,
+      "mia": 30582,
+      "casulties": 81834
+    },
+    "american-forces": {
+      "divisions": 32,
+      "tanks": 4428,
+      "artillery": 3181,
+      "soldiers": 705000,
+      "kia": 19000,
+      "wounded": 47500,
+      "mia": 23000,
+      "casulties": 89500
+    },
+    "british-forces": {
+      "soldiers": 111100,
+      "kia": 200,
+      "wounded": 1200,
+      "casulties": 1400
+    }
+  }
+]
