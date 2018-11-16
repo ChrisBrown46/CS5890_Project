@@ -1,9 +1,13 @@
 function buildBattle(battleNavigationChart, battleNumber, paragraphCount) {
+  const halfway = Math.round(paragraphCount / 2);
+
   for (let index = 1; index < paragraphCount; ++index) {
+    const percent = index >= halfway ? 2 : 1;
+
     new Waypoint({
-      element: document.getElementById("battle-" + battleNumber + "-" + index),
-      handler: function() {
-        battleNavigationChart.update(battleNumber, index)
+      element: document.getElementById("battle-" + battleNumber + "-" + percent),
+      handler: function(direction) {
+        battleNavigationChart.update(battleNumber, percent, direction)
       },
       context: document.getElementById("story"),
       offset: "50%"

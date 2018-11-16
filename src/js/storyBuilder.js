@@ -14,12 +14,12 @@ function buildStory(battleNavigationChart) {
       .text(d => d.battle);
 
     text
-      .selectAll("p")
+      .selectAll("p#temp")
       .data(d => d.text)
       .enter()
       .append("p")
       .attr("class", "h3")
-      .attr("id", function(_, i) { return this.parentNode.id + "-" + i; })
+      .attr("id", function(_, i) { return this.parentNode.id + "-" + (i + 1); })
       .text(d => d);
 
     buildWaypoints(battleNavigationChart);

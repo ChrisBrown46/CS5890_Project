@@ -76,3 +76,15 @@ div#story {
   padding-top: 30px;
   padding-bottom: 10px;
 }
+
+circle, rect {
+  fill: hsl(0, 0%, 50%);
+}
+
+circle.done, rect.done {
+  fill: hsl(171, 100%, 41%);
+}
+
+circle.selected, rect.selected {
+  fill: hsl(48, 100%, 67%);
+}
