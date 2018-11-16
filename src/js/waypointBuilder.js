@@ -1,62 +1,26 @@
-function buildBattle1() {
-  new Waypoint({
-    element: document.getElementById("battle-1"),
-    handler: function() {
-      console.log("Battle 1 Loaded");
-    },
-    context: document.getElementById("story"),
-    offset: "50%"
-  });
+function buildBattle(battleNavigationChart, battleNumber, paragraphCount) {
+  for (let index = 1; index < paragraphCount; ++index) {
+    new Waypoint({
+      element: document.getElementById("battle-" + battleNumber + "-" + index),
+      handler: function() {
+        battleNavigationChart.update(battleNumber, index)
+      },
+      context: document.getElementById("story"),
+      offset: "50%"
+    });
+  }
 }
 
-function buildBattle2() {
-  new Waypoint({
-    element: document.getElementById("battle-2"),
-    handler: function() {
-      console.log("Battle 2 Loaded");
-    },
-    context: document.getElementById("story"),
-    offset: "50%"
-  });
-}
-
-function buildBattle3() {
-  new Waypoint({
-    element: document.getElementById("battle-3"),
-    handler: function() {
-      console.log("Battle 3 Loaded");
-    },
-    context: document.getElementById("story"),
-    offset: "50%"
-  });
-}
-
-function buildBattle4() {
-  new Waypoint({
-    element: document.getElementById("battle-4"),
-    handler: function() {
-      console.log("Battle 4 Loaded");
-    },
-    context: document.getElementById("story"),
-    offset: "50%"
-  });
-}
-
-function buildBattle5() {
-  new Waypoint({
-    element: document.getElementById("battle-5"),
-    handler: function() {
-      console.log("Battle 5 Loaded");
-    },
-    context: document.getElementById("story"),
-    offset: "50%"
-  });
-}
-
-function buildWaypoints() {
-  buildBattle1();
-  buildBattle2();
-  buildBattle3();
-  buildBattle4();
-  buildBattle5();
+function buildWaypoints(battleNavigationChart) {
+  buildBattle(battleNavigationChart, 1, 4);
+  buildBattle(battleNavigationChart, 2, 4);
+  buildBattle(battleNavigationChart, 3, 2);
+  buildBattle(battleNavigationChart, 4, 3);
+  buildBattle(battleNavigationChart, 5, 3);
+  buildBattle(battleNavigationChart, 6, 3);
+  buildBattle(battleNavigationChart, 7, 3);
+  buildBattle(battleNavigationChart, 8, 3);
+  buildBattle(battleNavigationChart, 9, 3);
+  buildBattle(battleNavigationChart, 10, 5);
+  buildBattle(battleNavigationChart, 11, 3);
 }

@@ -53,6 +53,7 @@ class BattleNavigationChart {
       .attr("fill", "white");
   }
 
-  update() {
+  update(battleNumber, paragraphNumber) {
+    console.log("Battle #" + battleNumber + " is loaded on paragraph " + paragraphNumber);
   }
 }

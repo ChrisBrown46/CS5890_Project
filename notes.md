@@ -4,4 +4,3 @@ Ideas:
   - Encode battles on the timeline and the map: grey->yellow->green
   - Timeline at the top, evenly spaced, not based chronologically
   - Conclusion dot on timeline that shows overall casualties per country/side
-  

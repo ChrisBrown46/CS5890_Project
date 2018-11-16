@@ -1,8 +1,7 @@
 {
-  "start-date" : "December 7th, 1941",
-  "end-date" : "December 7th, 1941",
+  "date" : "December 7th, 1941",
   "description": "Though the surprise Japanese assault on Pearl Harbor was a success in itself, the overall mission had failed as the American aircraft carriers were not in harbor at the time.",
-  "japanese-forces": {
+  "japan-forces": {
     "carriers": 6,
     "battleships": 2,
     "heavy-cruisers": 2,
@@ -15,10 +14,9 @@
     "aircraft-lost": 29,
     "aircraft-damaged": 74,
     "kia": 64,
-    "pow": 1,
-    "casulties": 65
+    "pow": 1
   },
-  "american-forces": {
+  "us-forces": {
     "battleships": 8,
     "battleships-lost": 4,
     "cruisers": 8,
@@ -32,7 +30,6 @@
     "aircraft-lost": 188,
     "aircraft-damaged": 159,
     "kia": 2335,
-    "wounded": 1143,
-    "casulties": 3478
+    "soldiers-wounded": 1143
   }
 }
