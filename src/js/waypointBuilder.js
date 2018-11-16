@@ -4,9 +4,6 @@ function buildBattle(battleNavigationChart, battleNumber, paragraphCount) {
   for (let index = 1; index <= paragraphCount; index += halfway) {
     const percent = index > halfway ? 2 : 1;
 
-    if (battleNumber == 10)
-      console.log(index);
-
     new Waypoint({
       element: document.getElementById("battle-" + battleNumber + "-" + index),
       handler: function(direction) {
