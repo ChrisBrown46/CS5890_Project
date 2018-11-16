@@ -1,5 +1,5 @@
 function buildStory(battleNavigationChart) {
- d3.json("/src/resources/battle-text.json").then(function(data) {
+ d3.json("resources/battle-text.json").then(function(data) {
     const text = d3
       .select("#story")
       .selectAll("div")
