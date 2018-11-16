@@ -24,5 +24,4 @@ function buildStory(battleNavigationChart) {
 
     buildWaypoints(battleNavigationChart);
   });
-
 }
