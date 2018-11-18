@@ -1,5 +1,5 @@
-function buildStory(battleNavigationChart) {
- d3.json("/src/resources/battle-text.json").then(function(data) {
+function buildStory(battleNavigationChart, worldMap) {
+ d3.json("resources/battle-text.json").then(function(data) {
     const text = d3
       .select("#story")
       .selectAll("div")
@@ -22,6 +22,6 @@ function buildStory(battleNavigationChart) {
       .attr("id", function(_, i) { return this.parentNode.id + "-" + (i + 1); })
       .text(d => d);
 
-    buildWaypoints(battleNavigationChart);
+    buildWaypoints(battleNavigationChart, worldMap);
   });
 }

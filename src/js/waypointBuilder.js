@@ -1,4 +1,4 @@
-function buildBattle(battleNavigationChart, battleNumber, paragraphCount) {
+function buildBattle(battleNavigationChart, worldMap, battleNumber, paragraphCount) {
   const halfway = Math.round(paragraphCount / 2);
 
   for (let index = 1; index < paragraphCount; ++index) {
@@ -15,16 +15,16 @@ function buildBattle(battleNavigationChart, battleNumber, paragraphCount) {
   }
 }
 
-function buildWaypoints(battleNavigationChart) {
-  buildBattle(battleNavigationChart, 1, 4);
-  buildBattle(battleNavigationChart, 2, 4);
-  buildBattle(battleNavigationChart, 3, 2);
-  buildBattle(battleNavigationChart, 4, 3);
-  buildBattle(battleNavigationChart, 5, 3);
-  buildBattle(battleNavigationChart, 6, 3);
-  buildBattle(battleNavigationChart, 7, 3);
-  buildBattle(battleNavigationChart, 8, 3);
-  buildBattle(battleNavigationChart, 9, 3);
-  buildBattle(battleNavigationChart, 10, 5);
-  buildBattle(battleNavigationChart, 11, 3);
+function buildWaypoints(battleNavigationChart, worldMap) {
+  buildBattle(battleNavigationChart, worldMap, 1, 4);
+  buildBattle(battleNavigationChart, worldMap, 2, 4);
+  buildBattle(battleNavigationChart, worldMap, 3, 2);
+  buildBattle(battleNavigationChart, worldMap, 4, 3);
+  buildBattle(battleNavigationChart, worldMap, 5, 3);
+  buildBattle(battleNavigationChart, worldMap, 6, 3);
+  buildBattle(battleNavigationChart, worldMap, 7, 3);
+  buildBattle(battleNavigationChart, worldMap, 8, 3);
+  buildBattle(battleNavigationChart, worldMap, 9, 3);
+  buildBattle(battleNavigationChart, worldMap, 10, 5);
+  buildBattle(battleNavigationChart, worldMap, 11, 3);
 }

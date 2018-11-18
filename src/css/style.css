@@ -42,7 +42,7 @@ div#visualization-wrapper {
   color: white;
 }
 
-div#visualizations {
+div#map-div {
   display: flex;
   text-align: center;
   align-items: center;
