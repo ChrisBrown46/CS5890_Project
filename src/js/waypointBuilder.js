@@ -1,11 +1,11 @@
-function buildBattle(battleNavigationChart, worldMap, battleNumber, paragraphCount) {
-  const halfway = Math.round(paragraphCount / 2);
+function buildBattle(battleNavigationChart, battleNumber, paragraphCount) {
+  const halfway = Math.trunc(paragraphCount / 2);
 
-  for (let index = 1; index < paragraphCount; ++index) {
-    const percent = index >= halfway ? 2 : 1;
+  for (let index = 1; index <= paragraphCount; index += halfway) {
+    const percent = index > halfway ? 2 : 1;
 
     new Waypoint({
-      element: document.getElementById("battle-" + battleNumber + "-" + percent),
+      element: document.getElementById("battle-" + battleNumber + "-" + index),
       handler: function(direction) {
         battleNavigationChart.update(battleNumber, percent, direction)
       },
@@ -15,16 +15,37 @@ function buildBattle(battleNavigationChart, worldMap, battleNumber, paragraphCou
   }
 }
 
-function buildWaypoints(battleNavigationChart, worldMap) {
-  buildBattle(battleNavigationChart, worldMap, 1, 4);
-  buildBattle(battleNavigationChart, worldMap, 2, 4);
-  buildBattle(battleNavigationChart, worldMap, 3, 2);
-  buildBattle(battleNavigationChart, worldMap, 4, 3);
-  buildBattle(battleNavigationChart, worldMap, 5, 3);
-  buildBattle(battleNavigationChart, worldMap, 6, 3);
-  buildBattle(battleNavigationChart, worldMap, 7, 3);
-  buildBattle(battleNavigationChart, worldMap, 8, 3);
-  buildBattle(battleNavigationChart, worldMap, 9, 3);
-  buildBattle(battleNavigationChart, worldMap, 10, 5);
-  buildBattle(battleNavigationChart, worldMap, 11, 3);
+function buildConclusion(battleNavigationChart) {
+  new Waypoint({
+    element: document.getElementById("battle-12-1"),
+    handler: function() {
+      battleNavigationChart.update(12, 1, "down")
+    },
+    context: document.getElementById("story"),
+    offset: "50%"
+  });
+
+  new Waypoint({
+    element: document.getElementById("battle-12-4"),
+    handler: function() {
+      battleNavigationChart.update(13, 1, "down")
+    },
+    context: document.getElementById("story"),
+    offset: "95%"
+  });
+}
+
+function buildWaypoints(battleNavigationChart) {
+  buildBattle(battleNavigationChart, 1, 4);
+  buildBattle(battleNavigationChart, 2, 4);
+  buildBattle(battleNavigationChart, 3, 2);
+  buildBattle(battleNavigationChart, 4, 2);
+  buildBattle(battleNavigationChart, 5, 4);
+  buildBattle(battleNavigationChart, 6, 4);
+  buildBattle(battleNavigationChart, 7, 4);
+  buildBattle(battleNavigationChart, 8, 2);
+  buildBattle(battleNavigationChart, 9, 4);
+  buildBattle(battleNavigationChart, 10, 4);
+  buildBattle(battleNavigationChart, 11, 4);
+  buildConclusion(battleNavigationChart);
 }
