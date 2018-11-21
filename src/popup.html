@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <title>Popup Test</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
+
+    <style>
+      #popupDiv{
+        border: 3px double gray;
+        cursor: move;
+        height: 300px;
+        width: 350px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div id="popupDiv" class="ui-widget-content">
+      <div id="dropdown">
+        <select name="category" id="category"></select>
+      </div>
+      <svg id="chart" height="275" width="350">
+        <g></g>
+      </svg>
+    </div>
+  </body>
+  <script src="js/popupChart.js"></script>
+  </html>
