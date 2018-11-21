@@ -96,3 +96,7 @@ circle.selected, rect.selected {
   fill: hsl(48, 100%, 67%);
   transition: fill 1000ms;
 }
+
+.axis-line {
+  stroke: black;
+}
