@@ -1,23 +1,39 @@
-// TODO: Add categories to the data in battle-data.json
-// TOOD: Wrap the data in battle-data.json into forces_data
-// TODO: Call this script in index.html
 // TODO: Add the necessary svg and select elements to index.html
-// TODO: Call the scripts from popup.html in index.html
 // TODO: Move the styling and append the other elements from popup.html into index.html
 
+// Build the nullOption for the popup selector
+let nullOption = document.createElement("option");
+nullOption.innerHTML = "none";
+nullOption.value = "none";
+
+// Build the popup div/svg where the barchart will live.
+d3.select("#map-div").append("div")
+  .attr("id", "popupDiv")
+  .attr("class", "ui-widget-content");
+
+d3.select("#popupDiv").append("div")
+  .attr("id", "dropdown")
+  .append("select")
+  .attr("name", "category")
+  .attr("id", "category");
+
+d3.select("#popupDiv").append("svg")
+  .attr("id", "chart")
+  .attr("height", 275)
+  .attr("width", 350)
+  .append("g");
+
+// Make the popupDiv draggable using jQuery
 $( function() {
   $( "#popupDiv" ).draggable();
 });
+
 
 d3.json("resources/battle-data/battle-data.json").then(battleData => {
   buildPopup(battleData[10]);
 });
 
-let nullOption = document.createElement("option");
-nullOption.innerHTML = "none";
-nullOption.value = "none";
 
-let barChartSVG = d3.select("map-div").append("div")
 
 // creates the dropdown menu that allows the user to select which category they want to view
 // trigger this each time the scrollytelling changes to a new vis
