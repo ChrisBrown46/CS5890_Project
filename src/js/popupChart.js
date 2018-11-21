@@ -1,6 +1,3 @@
-// TODO: Add the necessary svg and select elements to index.html
-// TODO: Move the styling and append the other elements from popup.html into index.html
-
 // Build the nullOption for the popup selector
 let nullOption = document.createElement("option");
 nullOption.innerHTML = "none";

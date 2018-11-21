@@ -8,6 +8,27 @@
 | Gavin Browning    	| A01887359 	| gavin.browning@aggiemail.usu.edu      	|
 | Justin Fairbourn  	| A01842387 	| justin.fairbourn@gmail.com            	|
 
+ ### Justin's Paragraphs
+  1. Implementation: My goal was to take the different bar charts suggested in the must-have section (battle casualties, weapons, etc.) and create a single bar chart within a div that allows the user to switch between categories using a select element. 
+  [!EmptyChart](./visualization_images/barchart_01.png)
+  The challenge here was getting the select's onchange() function to work dynamically and generally depending on which categories and values pertain to the specific battle the user is exploring. 
+  [!Categories](./visualization_images/barchart_02.png)
+  My implementation creates the div, svg, select, and axis lines once, and then d3 creates the bars dynamically depending on which category the user selects.
+  [!Tanks](./visualization_images/barchart_03.png)
+  More work is needed to finalize the design, implement the axes, and create a class definition, but overall the data is handled correctly and the select functions dynamically as it should.
+  [!Wounded](./visualization_images/barchart_04.png)
+  
+  2. Evaluation: At a very basic level, the visualization does what it is supposed to. It receives the data it needs and handles it correctly, building its components dynamically allowing for higher user interactivity regardless of which battle is being observed. \
+  One issue with the data that needs further exploration is the existence of outliers and null values for certain categories. For instance, in some battles only one side may have data on number of POW's taken or artillery used. Or in some cases, maybe one side may have roughly 3,000 soldiers lost compared to 100,000 lost by the other side. Having the data displayed in the bar chart the way it is now allows us to make decisions on whether we should display these outliers/categories or throw them out of the bar chart entirely. \
+  There's still a fair amount of work that needs to be done for this part of the visualization, but the important thing is that the DOM element function correctly and the data is organized in a way that will make the following tasks easy. Tasks that still need to be completed for my part of the visualization include:
+    - Redefining popupChart.js to be a class definition similar to the other charts and visualizations created for index.html
+    - Implementing the axes to load and adjust dynamically and correctly for each category in each battle
+    - Improving the coloring and other styling for the popupChart to make it fit better with the visualization as a whole
+    - Implementing tooltip functionality for the bars in the bar chart to provide the user with exact information on the numbers and forces of each category
+    - Implementing better transitions and titles for the popupChart that allow the user to retain context as they switch between categories
+
+
+
  # Background and Motivation
  We are interested in this topic because we wanted to create a good scrollytelly example and found that historic stories would be a great way to do so. We chose to do World War II because it's an extremely well known topic and one that intrests many people.
 
