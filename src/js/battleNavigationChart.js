@@ -2,10 +2,12 @@ class BattleNavigationChart {
 
   constructor(battleData) {
     this.battleData = battleData;
+    this.trimmedBattleData = battleData.slice(0, -1);
 
     // Initializes the svg elements required for this chart
     this.margin = { top: 10, right: 20, bottom: 30, left: 50 };
-    const divBattleChart = d3.select("#battle-navigation-div");
+
+    const divBattleChart = d3.select("div#battle-navigation-div");
 
     // Fetch the svg bounds
     this.svgBounds = divBattleChart.node().getBoundingClientRect();
@@ -29,12 +31,17 @@ class BattleNavigationChart {
       .range([0, this.svgWidth]);
 
     // Create Battle Chart
-    const battleChart = this.svg
+    const rectBattleChart = this.svg
+      .selectAll("circle")
+      .data(this.trimmedBattleData)
+      .enter();
+
+    const circleBattleChart = this.svg
       .selectAll("circle")
       .data(this.battleData)
       .enter();
 
-    battleChart
+    rectBattleChart
       .append("rect")
       .attr("x", (_, i) => scale(i))
       .attr("width", (_, i) => (scale(i + 1) - scale(i)) / 2)
@@ -45,7 +52,7 @@ class BattleNavigationChart {
       .attr("id", (_, i) => "battle-chart-rectangle-" + i + "-1")
       .attr("fill", "none");
 
-    battleChart
+    rectBattleChart
       .append("rect")
       .attr("x", (_, i) => scale(i + 0.5))
       .attr("width", (_, i) => (scale(i + 1) - scale(i)) / 2)
@@ -56,7 +63,7 @@ class BattleNavigationChart {
       .attr("id", (_, i) => "battle-chart-rectangle-" + i + "-2")
       .attr("fill", "none");
 
-    battleChart
+    circleBattleChart
       .append("a")
       .attr("href", (_, i) => "#battle-" + (i + 1))
       .append("circle")
@@ -79,47 +86,47 @@ class BattleNavigationChart {
   }
 
   updateDirectionDown(battleNumber, textPosition) {
-    d3.select("#battle-chart-circle-" + battleNumber)
+    d3.select("circle#battle-chart-circle-" + battleNumber)
       .classed("selected", true);
 
     for (let index = 0; index < battleNumber; index++) {
-      d3.select("#battle-chart-circle-" + index)
+      d3.select("circle#battle-chart-circle-" + index)
         .classed("done", true);
 
-      d3.select("#battle-chart-rectangle-" + index + "-1")
+      d3.select("rect#battle-chart-rectangle-" + index + "-1")
         .classed("done", true);
-      d3.select("#battle-chart-rectangle-" + index + "-2")
+      d3.select("rect#battle-chart-rectangle-" + index + "-2")
         .classed("done", true);
     }
 
     // Rectangles
-    d3.select("#battle-chart-rectangle-" + battleNumber + "-1")
+    d3.select("rect#battle-chart-rectangle-" + battleNumber + "-1")
       .classed("selected", true);
     if (textPosition == 2)
-      d3.select("#battle-chart-rectangle-" + battleNumber + "-2")
+      d3.select("rect#battle-chart-rectangle-" + battleNumber + "-2")
         .classed("selected", true);
   }
 
   updateDirectionUp(battleNumber, textPosition) {
     if (textPosition == 1) {
       battleNumber -= 1;
-      d3.select("#battle-chart-rectangle-" + battleNumber + "-2")
+      d3.select("rect#battle-chart-rectangle-" + battleNumber + "-2")
         .classed("selected", true);
     }
 
     for (let index = 0; index < battleNumber; index++) {
-      d3.select("#battle-chart-circle-" + index)
+      d3.select("circle#battle-chart-circle-" + index)
         .classed("done", true);
 
-      d3.select("#battle-chart-rectangle-" + index + "-1")
+      d3.select("rect#battle-chart-rectangle-" + index + "-1")
         .classed("done", true);
-      d3.select("#battle-chart-rectangle-" + index + "-2")
+      d3.select("rect#battle-chart-rectangle-" + index + "-2")
         .classed("done", true);
     }
 
-    d3.select("#battle-chart-circle-" + battleNumber)
+    d3.select("circle#battle-chart-circle-" + battleNumber)
       .classed("selected", true);
-    d3.select("#battle-chart-rectangle-" + battleNumber + "-1")
+    d3.select("rect#battle-chart-rectangle-" + battleNumber + "-1")
       .classed("selected", true);
   }
 

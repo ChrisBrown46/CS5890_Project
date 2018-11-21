@@ -1,7 +1,7 @@
-function buildStory(battleNavigationChart, worldMap) {
+function buildStory(battleNavigationChart, worldMap, popupChart) {
  d3.json("resources/battle-text.json").then(function(data) {
     const text = d3
-      .select("#story")
+      .select("div#story")
       .selectAll("div")
       .data(data)
       .enter()
@@ -14,7 +14,7 @@ function buildStory(battleNavigationChart, worldMap) {
       .text(d => d.battle);
 
     text
-      .selectAll("p#temp")
+      .selectAll("p#temp")  // Select the <p> group but not the existing <p> tags
       .data(d => d.text)
       .enter()
       .append("p")
@@ -22,6 +22,6 @@ function buildStory(battleNavigationChart, worldMap) {
       .attr("id", function(_, i) { return this.parentNode.id + "-" + (i + 1); })
       .text(d => d);
 
-    buildWaypoints(battleNavigationChart, worldMap);
+    buildWaypoints(battleNavigationChart, worldMap, popupChart);
   });
 }

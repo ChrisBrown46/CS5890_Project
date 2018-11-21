@@ -99,11 +99,11 @@ circle.selected, rect.selected {
   transition: fill 1000ms;
 }
 
-.axis-line {
+line.axis-line {
   stroke: black;
 }
 
-#popupDiv{
+div#popup-div{
   border: 3px double gray;
   cursor: move;
   height: 300px;
