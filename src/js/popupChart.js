@@ -33,8 +33,6 @@ d3.json("resources/battle-data/battle-data.json").then(battleData => {
   buildPopup(battleData[10]);
 });
 
-
-
 // creates the dropdown menu that allows the user to select which category they want to view
 // trigger this each time the scrollytelling changes to a new vis
 function buildPopup(battlejson){
