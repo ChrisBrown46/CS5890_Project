@@ -78,7 +78,7 @@ class PopupChart {
     );
   }
 
-  // Change the svg according to the specific category
+  // Change the svg according to the specified category
   buildChart(category, forces, dataDomain) {
     const chartData = [];
 
@@ -98,19 +98,19 @@ class PopupChart {
     this.popup.selectAll("rect").remove();
 
     if (category === "none") {
-      // output a message if "none" is selected
+      // Output a message if "none" is selected
       this.popup
         .append("text")
         .text("Click on a category!")
         .attr("x", 100)
         .attr("y", 100);
     } else {
-      // establish the yScale used for the y-axis
+      // Establish the yScale used for the y-axis
       const yScale = d3.scaleLinear()
-        .domain([0,dataDomain])
+        .domain([0, dataDomain])
         .range([245, 10]);
 
-      // add one rectangle for each data entry
+      // Add one rectangle for each data entry
       this.popup
         .selectAll("rect")
         .data(chartData)
