@@ -70,13 +70,13 @@ This is the same as weapons used but will be displayed at the end in a large for
 
 # Implementation
 1. BattleCasulties/WeaponsUsed Bar Charts: Our goal was to take the different bar charts suggested in the must-have section (battle casualties, weapons, etc.) and create a single bar chart within a div that allows the user to switch between categories using a select element. 
-![EmptyChart](./visualization_images/barchart_01.png)
+![EmptyChart](./visualization_images/barchart_01.PNG)
 The challenge here was getting the select's onchange() function to work dynamically and generally depending on which categories and values pertain to the specific battle the user is exploring. 
-![Categories](./visualization_images/barchart_02.png)
+![Categories](./visualization_images/barchart_02.PNG)
 Our implementation creates the div, svg, select, and axis lines once, and then d3 creates the bars dynamically depending on which category the user selects.
-![Tanks](./visualization_images/barchart_03.png)
+![Tanks](./visualization_images/barchart_03.PNG)
 More work is needed to finalize the design, implement the axes, and create a class definition, but overall the data is handled correctly and the select functions dynamically as it should.
-![Wounded](./visualization_images/barchart_04.png)
+![Wounded](./visualization_images/barchart_04.PNG)
 
 2. Year Battle Chart: Our intent with this visualization was to allow users to move between battles without having to use the scroll functionality. It also allows users to have a sense of where they are in the overall story.
 ![YearBattleChart](./visualization_images/year_battle_chart.jpg)
