@@ -69,25 +69,38 @@ This is the same as weapons used but will be displayed at the end in a large for
 
 
 # Implementation
-1. BattleCasulties/WeaponsUsed Bar Charts: Our goal was to take the different bar charts suggested in the must-have section (battle casualties, weapons, etc.) and create a single bar chart within a div that allows the user to switch between categories using a select element. 
+1. BattleCasulties/WeaponsUsed Bar Charts: Our goal was to take the different bar charts suggested in the must-have section (battle casualties, weapons, etc.) and create a single bar chart within a div that allows the user to switch between categories using a select element.
+
 ![EmptyChart](./visualization_images/barchart_01.PNG)
-The challenge here was getting the select's onchange() function to work dynamically and generally depending on which categories and values pertain to the specific battle the user is exploring. 
+
+The challenge here was getting the select's onchange() function to work dynamically and generally depending on which categories and values pertain to the specific battle the user is exploring.
+
 ![Categories](./visualization_images/barchart_02.PNG)
+
 Our implementation creates the div, svg, select, and axis lines once, and then d3 creates the bars dynamically depending on which category the user selects.
+
 ![Tanks](./visualization_images/barchart_03.PNG)
+
 More work is needed to finalize the design, implement the axes, and create a class definition, but overall the data is handled correctly and the select functions dynamically as it should.
+
 ![Wounded](./visualization_images/barchart_04.PNG)
 
+
 2. Year Battle Chart: Our intent with this visualization was to allow users to move between battles without having to use the scroll functionality. It also allows users to have a sense of where they are in the overall story.
-![YearBattleChart](./visualization_images/year_battle_chart.jpg)
+
+![YearBattleChart](./visualization_images/year_battle_chart.JPG)
+
 Another feature we wanted was a smooth transition in the scrolling feature so that when users selected a new battle, they would clearly see the story moving back in time, or forward.
 Along with the above mentioned feature, we wanted a smooth transition in the visualization so feedback is given in both the text and visualization.
 (No great picture for these features.)
 We also used coloring to show users how far along they are with the story, what they have already read (or have skipped), and what is remaining. This can be seen in the first picture with the coloration (green = done, yellow = reading).
 
+
 # Evaluation
-1. BattleCasulties/WeaponsUsed Bar Charts: At a very basic level, the visualization does what it is supposed to. It receives the data it needs and handles it correctly, building its components dynamically allowing for higher user interactivity regardless of which battle is being observed. \
-One issue with the data that needs further exploration is the existence of outliers and null values for certain categories. For instance, in some battles only one side may have data on number of POW's taken or artillery used. Or in some cases, maybe one side may have roughly 3,000 soldiers lost compared to 100,000 lost by the other side. Having the data displayed in the bar chart the way it is now allows us to make decisions on whether we should display these outliers/categories or throw them out of the bar chart entirely. \
+1. BattleCasulties/WeaponsUsed Bar Charts: At a very basic level, the visualization does what it is supposed to. It receives the data it needs and handles it correctly, building its components dynamically allowing for higher user interactivity regardless of which battle is being observed.
+
+One issue with the data that needs further exploration is the existence of outliers and null values for certain categories. For instance, in some battles only one side may have data on number of POW's taken or artillery used. Or in some cases, maybe one side may have roughly 3,000 soldiers lost compared to 100,000 lost by the other side. Having the data displayed in the bar chart the way it is now allows us to make decisions on whether we should display these outliers/categories or throw them out of the bar chart entirely.
+
 There's still a fair amount of work that needs to be done for this part of the visualization, but the important thing is that the DOM element function correctly and the data is organized in a way that will make the following tasks easy. Tasks that still need to be completed for my part of the visualization include:
   - Redefining popupChart.js to be a class definition similar to the other charts and visualizations created for index.html
   - Implementing the axes to load and adjust dynamically and correctly for each category in each battle
@@ -96,6 +109,7 @@ There's still a fair amount of work that needs to be done for this part of the v
   - Implementing better transitions and titles for the popupChart that allow the user to retain context as they switch between categories
 
 2. Year Battle Chart: There was not a whole lot we learned from this visualization. It was meant to provide navigation for the main visualizations.
+
 The visualization works really well and is surprisingly fun to play with. It is intuitive to use and very responsive.
 Some improvements that are planned include: labels on the circle for battle names, different color scheme, and possibly a continous flow between circles instead of checkpoints.
 
