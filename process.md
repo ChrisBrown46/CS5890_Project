@@ -88,7 +88,7 @@ More work is needed to finalize the design, implement the axes, and create a cla
 
 2. Year Battle Chart: Our intent with this visualization was to allow users to move between battles without having to use the scroll functionality. It also allows users to have a sense of where they are in the overall story.
 
-![YearBattleChart](./visualization_images/year_battle_chart.JPG)
+![YearBattleChart](./visualization_images/year-battle-chart.JPG)
 
 Another feature we wanted was a smooth transition in the scrolling feature so that when users selected a new battle, they would clearly see the story moving back in time, or forward.
 Along with the above mentioned feature, we wanted a smooth transition in the visualization so feedback is given in both the text and visualization.
