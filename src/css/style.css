@@ -29,7 +29,7 @@ div#battle-navigation-div {
   
   border-bottom: 5px solid white;
 
-  background:  hsl(0, 0%, 21%);
+  background:  #24282C;
   color: white;
 }
 
@@ -54,7 +54,7 @@ div#map-div {
   width: 70%;
   height: 100%;
 
-  background:  hsl(0, 0%, 21%);
+  background:  #24282C;
   color: white;
 
   z-index: 0;
@@ -75,7 +75,7 @@ div#story {
 
   border-left: 5px solid white;
 
-  background:  hsl(0, 0%, 21%);
+  background:  #24282C;
   color: white;
 }
 
@@ -110,4 +110,18 @@ div#popup-div{
   width: 350px;
   z-index: 5;
   background-color: white;
+}
+
+.countries {
+  fill: #2C2F33;
+  stroke: white;
+  stroke-width: .4;
+}
+
+.side-axis { 
+  fill: hsl(0, 50%, 50%);
+}
+
+.side-allies {
+  fill: #4793B2;
 }
