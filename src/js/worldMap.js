@@ -39,6 +39,23 @@ class WorldMap {
     })
   }
 
+  updateSides() {
+    const allies_iso = ["AUS", "BRA", "CAN", "NZL", "ZAF", "RUS", "GBR", "USA"]
+    const axis_iso = ["DEU", "ITA", "JPN", "BGR", "HUN", "ROU", "SVK", "AUT", "ETH", "CHN"]
+
+    allies_iso.forEach(allies_iso => {
+      this.svg
+        .selectAll("path#" + allies_iso)
+        .classed("side-allies", true);
+    })
+
+    axis_iso.forEach(axis_iso => {
+      this.svg
+        .selectAll("path#" + axis_iso)
+        .classed("side-axis", true);
+    })
+  }
+
   drawMap(world) {
     const path = d3.geoPath().projection(this.projection);
 
