@@ -19,7 +19,7 @@ class WorldMap {
       .attr("height", this.svgHeight)
       .attr("id", "map-chart")
       .append("g")
-      .attr("transform", "translate(50, 50)");
+      .attr("transform", "translate(5, 150) scale(1.395, 1.395)");
   }
 
   updateSides() {

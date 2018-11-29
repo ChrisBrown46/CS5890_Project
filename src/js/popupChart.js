@@ -3,54 +3,28 @@ class PopupChart {
   constructor(battleData) {
     this.battleData = battleData;
 
-    // Build the popup div/svg where the barchart will live.
-    this.popupDiv = d3.select("div#map-div")
-      .append("div")
-      .attr("id", "popup-div")
-      .attr("class", "ui-widget-content");
-
-    this.category = this.popupDiv
-      .append("div")
-      .attr("id", "dropdown")
-      .append("select")
-      .attr("name", "category")
-      .attr("id", "category");
-
-    this.popup = this.popupDiv
+    this.popup = d3.select("div#test")
       .append("svg")
       .attr("id", "chart")
-      .attr("height", 275)
-      .attr("width", 350)
-      .append("g");
-
-    // Make the popup-div draggable using jQuery
-    $(() => $("div#popup-div").draggable());
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .append("g")
+      .attr("transform", "scale(1, -1)");
   }
 
   // Creates the dropdown menu that allows the user to select which category they want to view
   // trigger this each time the scrollytelling changes to a new visualization
   buildPopup(battleJson) {
     // Re-initialize the category selectbox
-    $("#category").children().remove();
-
-    const categories = battleJson.categories;
-    const categoryMenu = document.getElementById("category");
-
-    for (const category in categories) {
-      // Create a new option for each category and add it to the selection menu
-      const newOption = document.createElement("option");
-      newOption.text = category;
-      newOption.value = category;
-      newOption.selected = true;
-
-      categoryMenu.add(newOption);
-    }
+    this.popup
+      .selectAll("*")
+      .remove();
 
     // Add the axis lines to the chart
     this.popup
       .append("line")
-      .attr("x1", 50)
-      .attr("x2", 50)
+      .attr("x1", 20)
+      .attr("x2", 20)
       .attr("y1", 10)
       .attr("y2", 245)
       .attr("class", "axis-line");
