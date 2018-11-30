@@ -1,6 +1,7 @@
 [
   {
     "battle": "Invasion of Poland",
+    "number": "1",
     "start-date" : "September 1st, 1939",
     "end-date" : "October 6th, 1939",
     "description": "There was little that Poland could do to stave off elimination at the hands of the German military invading from the West - to be later joined by the Red Army in the East.",
@@ -58,6 +59,7 @@
   },
   {
     "battle": "Battle of the Atlantic",
+    "number": "2",
     "start-date" : "September 3rd, 1939",
     "end-date" : "May 7th, 1945",
     "description": "Control of the Atlantic shipping lanes was key to both an Allied and an Axis victory - luckily for the Allies, victory smiled upon them.",
@@ -100,6 +102,7 @@
   },
   {
     "battle": "Dunkirk",
+    "number": "3",
     "start-date" : "May 27th, 1940",
     "end-date" : "June 4th, 1940",
     "description": "Facing annihilation of grand proportions, over 330,000 Allied troops were evacuated from the French port city of Dunkirk and lived to fight another day.",
@@ -140,6 +143,7 @@
   },
   {
     "battle": "Battle of Britain",
+    "number": "4",
     "start-date" : "July 10th, 1940",
     "end-date" : "October 31st, 1940",
     "description": "The Battle of Britain was Free Europe's last stand against the expanding power of the Axis.",
@@ -175,6 +179,7 @@
   },
   {
     "battle": "Operation Barbarossa",
+    "number": "5",
     "start-date" : "June 22nd, 1941",
     "end-date" : "December 5th, 1941",
     "description": "After military successes throughout Europe, in the Balkans, and on Crete, Hitler's attention inevitably turned to the invasion of the Soviet Union.",
@@ -223,6 +228,7 @@
   },
   {
     "battle": "Battle of Moscow",
+    "number": "6",
     "start-date" : "October 2nd, 1941",
     "end-date" : "January 7th, 1942",
     "description": "The Soviet defensive effort frustrated Hitler's attack on Moscow, the capital and largest city of the Soviet Union.",
@@ -254,6 +260,7 @@
   },  
   {
     "battle": "Pearl Harbor",
+    "number": "7",
     "start-date" : "December 7th, 1941",
     "end-date" : "December 7th, 1941",
     "description": "Though the surprise Japanese assault on Pearl Harbor was a success in itself, the overall mission had failed as the American aircraft carriers were not in harbor at the time.",
@@ -317,6 +324,7 @@
   },
   {
     "battle": "Battle of Midway",
+    "number": "8",
     "start-date" : "June 4th, 1942",
     "end-date" : "June 7th, 1942",
     "description": "The strategic Pacific island of Midway became center stage for a complex Japanese Navy initiative to help setup a launch post within reach of Hawaii.",
@@ -373,6 +381,7 @@
   },
   {
     "battle": "Battle of Stalingrad",
+    "number": "9",
     "start-date" : "August, 1942",
     "end-date" : "February 2nd, 1943",
     "description": "Hitler had to save face and commit thousands of lives to take Stalingrad while the German propaganda machine spewed an imminent victory for the invaders.",
@@ -424,6 +433,7 @@
   },
   {
     "battle": "D-Day (Normandy)",
+    "number": "10",
     "start-date" : "June 6th, 1944",
     "end-date" : "June 6th, 1944",
     "description": "So ended the bloody business of the day when the Allies enacted their brazen plan to take back Europe by way of entry through Northern France.",
@@ -472,6 +482,7 @@
   },
   {
     "battle": "Battle of the Bulge",
+    "number": "11",
     "start-date" : "December 16th, 1944",
     "end-date" : "January 25th, 1945",
     "description": "In one final, desperate gamble of the war, Hitler enacted his Ardennes Offensive and drove a wedge into the Allied lines towards Antwerp - but little else came from the initiative.",
@@ -515,6 +526,7 @@
     }
   },
   {
-    "battle": "Conclusion"
+    "battle": "Conclusion",
+    "number": "12"
   }
 ]
