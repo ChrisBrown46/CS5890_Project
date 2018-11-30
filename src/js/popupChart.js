@@ -37,74 +37,74 @@ class PopupChart {
       .attr("y2", 245)
       .attr("class", "axis-line");
 
-    // Initialize the bar chart
-    this.buildChart(
-      categoryMenu.value, 
-      battleJson.forces_data, 
-      categories[categoryMenu.value]
-    );
+    // // Initialize the bar chart
+    // this.buildChart(
+    //   categoryMenu.value, 
+    //   battleJson.forces_data, 
+    //   categories[categoryMenu.value]
+    // );
   
-    // Set the select's onchange to dynamically load new data
-    categoryMenu.onchange = () => this.buildChart(
-      categoryMenu.value, 
-      battleJson.forces_data, 
-      categories[categoryMenu.value]
-    );
+    // // Set the select's onchange to dynamically load new data
+    // categoryMenu.onchange = () => this.buildChart(
+    //   categoryMenu.value, 
+    //   battleJson.forces_data, 
+    //   categories[categoryMenu.value]
+    // );
   }
 
   // Change the svg according to the specified category
   buildChart(category, forces, dataDomain) {
-    const chartData = [];
+    // const chartData = [];
 
-    // Parse out and validate the data from battleJson
-    for (const force in forces) {
-      let newVal = forces[force][category];
-      if (newVal === undefined) newVal = 0;
+    // // Parse out and validate the data from battleJson
+    // for (const force in forces) {
+    //   let newVal = forces[force][category];
+    //   if (newVal === undefined) newVal = 0;
 
-      chartData.push({
-        name: force,
-        val: newVal
-      });
-    }
+    //   chartData.push({
+    //     name: force,
+    //     val: newVal
+    //   });
+    // }
 
-    // Clear the old data
-    this.popup.selectAll("text").remove();
-    this.popup.selectAll("rect").remove();
+    // // Clear the old data
+    // this.popup.selectAll("text").remove();
+    // this.popup.selectAll("rect").remove();
 
-    if (category === "none") {
-      // Output a message if "none" is selected
-      this.popup
-        .append("text")
-        .text("Click on a category!")
-        .attr("x", 100)
-        .attr("y", 100);
-    } else {
-      // Establish the yScale used for the y-axis
-      const yScale = d3.scaleLinear()
-        .domain([0, dataDomain])
-        .range([245, 10]);
+    // if (category === "none") {
+    //   // Output a message if "none" is selected
+    //   this.popup
+    //     .append("text")
+    //     .text("Click on a category!")
+    //     .attr("x", 100)
+    //     .attr("y", 100);
+    // } else {
+    //   // Establish the yScale used for the y-axis
+    //   const yScale = d3.scaleLinear()
+    //     .domain([0, dataDomain])
+    //     .range([245, 10]);
 
-      // Add one rectangle for each data entry
-      this.popup
-        .selectAll("rect")
-        .data(chartData)
-        .enter()
-        .append("rect")
-        .attr("x", (_, i) => i * (250 / chartData.length) + 55)
-        .attr("y", d => yScale(d.val))
-        .attr("val", d => d.val)
-        .attr("height", d => 245 - yScale(d.val))
-        .attr("class", d => `bar ${d.name}`)
-        .attr("width", () => 250 / chartData.length - 3)
-    }
+    //   // Add one rectangle for each data entry
+    //   this.popup
+    //     .selectAll("rect")
+    //     .data(chartData)
+    //     .enter()
+    //     .append("rect")
+    //     .attr("x", (_, i) => i * (250 / chartData.length) + 55)
+    //     .attr("y", d => yScale(d.val))
+    //     .attr("val", d => d.val)
+    //     .attr("height", d => 245 - yScale(d.val))
+    //     .attr("class", d => `bar ${d.name}`)
+    //     .attr("width", () => 250 / chartData.length - 3)
+    // }
   }
 
   update(battleNumber, textPosition, direction) {
-    if (textPosition !== 1) return;
+    // if (textPosition !== 1) return;
 
-    if (direction === "up")
-      battleNumber -= 1;
+    // if (direction === "up")
+    //   battleNumber -= 1;
     
-    this.buildPopup(this.battleData[battleNumber - 1]);
+    // this.buildPopup(this.battleData[battleNumber - 1]);
   }
 }
