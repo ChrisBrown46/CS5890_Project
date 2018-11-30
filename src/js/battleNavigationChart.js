@@ -1,7 +1,8 @@
 class BattleNavigationChart {
 
-  constructor(battleData) {
+  constructor(battleData, worldMap) {
     this.battleData = battleData;
+    this.worldMap = worldMap;
     this.trimmedBattleData = battleData.slice(0, -1);
 
     // Initializes the svg elements required for this chart
@@ -26,6 +27,7 @@ class BattleNavigationChart {
   }
 
   buildChart() {
+    const self = this
     const scale = d3.scaleLinear()
       .domain([0, this.battleData.length + 1])
       .range([0, this.svgWidth]);
@@ -73,6 +75,12 @@ class BattleNavigationChart {
       .attr("stroke-width", "2")
       .attr("fill", "white")
       .attr("id", (_, i) => "battle-chart-circle-" + i);
+
+    circleBattleChart
+      .selectAll("circle")
+      .on("click", function(d) {
+        self.worldMap.updateMap(d);
+      })
   }
 
   clearBattles() {
