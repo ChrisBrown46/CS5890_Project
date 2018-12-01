@@ -1,9 +1,8 @@
 class BattleNavigationChart {
 
-  constructor(battleData, worldMap) {
+  constructor(battleData) {
     this.battleData = battleData;
     this.trimmedBattleData = battleData.slice(0, -1);
-    this.worldMap = worldMap;
 
     // Initializes the svg elements required for this chart
     this.margin = { top: 10, right: 20, bottom: 30, left: 50 };
@@ -67,7 +66,6 @@ class BattleNavigationChart {
     circleBattleChart
       .append("a")
       .attr("href", (_, i) => "#battle-" + (i + 1))
-      .on("click", (_, i) => this.worldMap.updateMap(i))
       .append("circle")
       .attr("cx", (_, i) => scale(i))
       .attr("r", 25)
