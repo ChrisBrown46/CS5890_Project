@@ -103,6 +103,9 @@ class PopupChart {
       .attr("hidden", "true")
       .style("fill", "white");
 
+    this.tooltipDiv = d3.select("body").append("div")	
+      .attr("class", "tooltip")				
+      .style("opacity", 0);
     
 
     this.update(1)
@@ -174,6 +177,17 @@ class PopupChart {
         .attr("transform", "scale(1, -1)")
         .style("color", "white")
         .attr("class", "label")
+        .on("mouseover", d => {
+          this.tooltipDiv.style("opacity", .9);
+          let tooltipHtml = d.val;
+          if(d.val === 0) tooltipHtml = "No data!";
+          this.tooltipDiv.html(tooltipHtml)
+            .style("left", (d3.event.pageX) + "px")
+            .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", d => {
+          this.tooltipDiv.style("opacity", 0);
+        })
 
       let yAxis = d3.axisLeft(yAxisScale);
 
