@@ -59,7 +59,7 @@ class PopupChart {
     this.selectBox = this.chartDiv.append("select").node();
     this.selectBox.onchange = () => this.updateBars();
     
-    // this.selectBox.hidden = true;
+    this.selectBox.hidden = true;
 
     this.chartSvg = this.chartDiv.append("svg")
       .attr("id", `chart${chartNumber}`)
@@ -127,6 +127,7 @@ class PopupChart {
       this.popupY.attr("hidden", null);
       this.noDataText.attr("hidden", "true");
       this.popup.selectAll("rect").remove();
+      this.chartSvg.selectAll("g.yAxis").remove();
 
       let chartData = [];
 
@@ -143,6 +144,10 @@ class PopupChart {
       const yScale = d3.scaleLinear()
         .domain([0, categoryDomain])
         .range([0, this.height * 0.7]);
+
+      const yAxisScale = d3.scaleLinear()
+        .domain([0, categoryDomain])
+        .range([this.height * 0.7, 0]);
 
       let barWidth = this.width * 0.75 / chartData.length;
 
@@ -169,6 +174,19 @@ class PopupChart {
         .attr("transform", "scale(1, -1)")
         .style("color", "white")
         .attr("class", "label")
+
+      let yAxis = d3.axisLeft(yAxisScale);
+
+      this.chartSvg.append('g')
+        .attr('transform', `translate(${this.width * 0.2},${this.width * 0.15})`)
+        .attr('class', 'yAxis')
+        .call(yAxis)
+        .selectAll('text')
+        .attr('transform', `translate(${this.width * -0.05}, ${this.height * -0.05})`)
+        .attr('dx', '1.2em')
+        .attr('dy', '1.5em')
+        .attr('class', "label")
+      ;
     }
 
     else {
@@ -178,6 +196,7 @@ class PopupChart {
       this.popupX.attr("hidden", "true");
       this.popupY.attr("hidden", "true");
       this.noDataText.attr("hidden", null);
+      this.chartSvg.selectAll("g.yAxis").remove();
     }
   }
 
