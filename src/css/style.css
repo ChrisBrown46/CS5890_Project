@@ -137,3 +137,9 @@ div.inner {
 
   border: 1.75px double #2C2F33;
 }
+
+text.label {
+  fill: white;
+  font-size: 10px;
+  align-self: center;
+}

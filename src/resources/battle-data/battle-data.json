@@ -16,7 +16,7 @@
       "casualties": 1000000
     },
     "forces_data": {
-      "german-forces": {
+      "Germany": {
         "divisions": 60,
         "tanks": 2750,
         "aircraft": 2315,
@@ -27,7 +27,7 @@
         "wounded": 30300,
         "casualties": 50100
       },
-      "polish-forces": {
+      "Poland": {
         "divisions": 39,
         "tanks": 880,
         "aircraft": 400,
@@ -37,7 +37,7 @@
         "pow": 694000,
         "casualties": 889700
       },
-      "soviet-forces": {
+      "Russia": {
         "divisons": 33,
         "tanks": 4736,
         "aircraft": 3300,
@@ -47,7 +47,7 @@
         "wounded": 2383,
         "casualties": 5327
       },
-      "slovakian-forces": {
+      "Slovakia": {
         "soldiers": 51306,
         "kia": 37,
         "mia": 11,
