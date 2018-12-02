@@ -49,19 +49,23 @@ class PopupChart {
   constructor(battleData, chartNumber) {
     this.battleData = battleData;
     this.currentAttribute = "aircraft";
-    this.currentBattle = this.battleData[0];
+    this.currentBattle = null;
+    this.chartNumber = chartNumber;
+    // this.currentBattle = this.battleData[0];
     this.chartDiv = d3.select(`div#chartDiv${chartNumber}`);
     this.dimensions = this.chartDiv.node().getBoundingClientRect();
     this.selectBox = this.chartDiv.append("select").node();
-    this.selectBox.onchange = () => this.buildChart();
+    this.selectBox.onchange = () => this.updateBars();
     
+    // this.selectBox.hidden = true;
+
     this.chartSvg = this.chartDiv.append("svg")
       .attr("id", `chart${chartNumber}`)
       .attr("width", "100%")
       .attr("height", "100%");
 
     this.popup = this.chartSvg.append("g")
-      .attr("transform", "scale(1, 1)");
+      .attr("transform", `scale(1, -1) translate(0, -${this.dimensions.height})`);
 
     for (let option of options){
       let newOption = document.createElement("option");
@@ -70,31 +74,61 @@ class PopupChart {
       this.selectBox.add(newOption);
     }
 
-
-    this.popup
+    // Initialize the Y-axis line
+    this.popupY = this.popup
       .append("line")
-      .attr("x1", 20)
-      .attr("x2", 20)
-      .attr("y1", 10)
-      .attr("y2", 100)
-      .attr("class", "axis-line");
-    // this.popup
-    //   .append("line")
-    //   .attr("x1", this.dimensions.width * 0.2)
-    //   .attr("x2", this.dimensions.width * 0.2)
-    //   .attr("y1", this.dimensions.height * 0.8)
-    //   .attr("y2", this.dimensions.height * 0.2)
-    //   .attr("class", "axis-line");
-
-    this.popup
-      .append("line")
-      .attr("x1", 50)
-      .attr("x2", 300)
-      .attr("y1", 245)
-      .attr("y2", 245)
+      .attr("x1", this.dimensions.width * 0.20)
+      .attr("x2", this.dimensions.width * 0.20)
+      .attr("y1", this.dimensions.height * 0.85)
+      .attr("y2", this.dimensions.height * 0.15)
       .attr("class", "axis-line");
 
+    // Initialize the X-axis line
+    this.popupX = this.popup
+      .append("line")
+      .attr("x1", this.dimensions.width * 0.20)
+      .attr("x2", this.dimensions.width * 0.85)
+      .attr("y1", this.dimensions.height * 0.15)
+      .attr("y2", this.dimensions.height * 0.15)
+      .attr("class", "axis-line");
+
+    // Initialize the "no data found" text
+    this.noDataText = this.popup.append("text")
+      .text("No data found!")
+      .attr("x", this.dimensions.width * 0.2)
+      .attr("y", this.dimensions.height * -0.6)
+      .attr("transform", "scale(1,-1)")
+      .attr("hidden", "true");
+
+    this.update(1)
     this.configureOptions();
+  }
+
+  update(battleNumber){
+    this.currentBattle = this.battleData[battleNumber - 1];
+    this.configureOptions();
+    this.updateBars();
+  }
+
+  updateBars(){
+    // First figure out which attribute has been selected.
+    this.currentAttribute = this.selectBox.options[this.selectBox.selectedIndex].value;
+
+    // Then see if there is data for this category for the currently selected battle and behave accordingly:
+    if(this.currentBattle.categories[this.currentAttribute] != undefined){
+      console.log("found");
+      this.popupX.attr("hidden", null);
+      this.popupY.attr("hidden", null);
+      this.noDataText.attr("hidden", "true");
+    }
+    else {
+      // Data Not found for this attribute in this battle
+      this.popup.selectAll("text.label").remove();
+      this.popup.selectAll("rect").remove();
+      this.popupX.attr("hidden", "true");
+      this.popupY.attr("hidden", "true");
+      this.noDataText.attr("hidden", null);
+    }
   }
 
   configureOptions(){
@@ -131,18 +165,18 @@ class PopupChart {
 
   // Change the svg according to the specified category
   buildChart(category, forces, dataDomain) {
-    // const chartData = [];
+    const chartData = [];
 
-    // // Parse out and validate the data from battleJson
-    // for (const force in forces) {
-    //   let newVal = forces[force][category];
-    //   if (newVal === undefined) newVal = 0;
+    // Parse out and validate the data from battleJson
+    for (const force in forces) {
+      let newVal = forces[force][category];
+      if (newVal === undefined) newVal = 0;
 
-    //   chartData.push({
-    //     name: force,
-    //     val: newVal
-    //   });
-    // }
+      chartData.push({
+        name: force,
+        val: newVal
+      });
+    }
 
     // // Clear the old data
     // this.popup.selectAll("text").remove();
@@ -176,12 +210,12 @@ class PopupChart {
     // }
   }
 
-  update(battleNumber, textPosition, direction) {
+  // update(battleNumber, textPosition, direction) {
     // if (textPosition !== 1) return;
 
     // if (direction === "up")
     //   battleNumber -= 1;
     
     // this.buildPopup(this.battleData[battleNumber - 1]);
-  }
+  // }
 }
