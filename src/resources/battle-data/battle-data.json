@@ -69,7 +69,7 @@
       "merchants-kia": 36000
     },
     "forces_data": {
-      "axis-forces": {
+      "Axis": {
         "countries": [
           "Germany",
           "Italy"
@@ -78,7 +78,7 @@
         "casualties": 30500,
         "submarines-lost": 800
       },
-      "allied-forces": {
+      "Allies": {
         "countries": [
           "United Kingdom",
           "Canada",
@@ -112,13 +112,13 @@
       "soldiers-evacuated": 338226
     },
     "forces_data": {
-      "german-forces": {
+      "Germany": {
         "tanks": 100,
         "aircraft": 396,
         "soldiers": 800000,
         "casualties": 20000
       },
-      "allied-forces": {
+      "Allies": {
         "countries": [
           "United Kingdom",
           "British India",
@@ -154,7 +154,7 @@
       "civilian-wounded": 20325
     },
     "forces_data": {
-      "german-forces": {
+      "Germany": {
         "aircraft": 2550,
         "aircraft-lost": 1977,
         "kia": 2585,
@@ -162,7 +162,7 @@
         "pow": 925,
         "casualties": 3637
       },
-      "british-forces": {
+      "Britain": {
         "aircraft": 1963,
         "aircraft-lost": 1744,
         "kia": 1542,
@@ -193,7 +193,7 @@
       "casualties": 5000000
     },
     "forces_data": {
-      "german-forces": {
+      "Germany": {
         "aircraft": 5369,
         "aircraft-lost": 2827,
         "tanks": 3795,
@@ -207,7 +207,7 @@
         "sick": 8000,
         "casualties": 889788
       },
-      "soviet-forces": {
+      "Russia": {
         "aircraft": 9100,
         "aircraft-lost": 21200,
         "tanks": 11000,
@@ -235,14 +235,14 @@
       "artillery": 15000
     },
     "forces_data": {
-      "german-forces": {
+      "Germany": {
         "soldiers": 1929406,
         "casualties": 174194,
         "tanks": 2470,
         "aircraft": 599,
         "artillery": 14000
       },
-      "soviet-forces": {
+      "Russia": {
         "soldiers": 1400000,
         "casualties": 1029234,
         "tanks": 3232,
@@ -280,7 +280,7 @@
       "other-ships-damaged": 5
     },
     "forces_data": {
-      "japanese-forces": {
+      "Japan": {
         "carriers": 6,
         "battleships": 2,
         "heavy-cruisers": 2,
@@ -296,7 +296,7 @@
         "pow": 1,
         "casualties": 65
       },
-      "american-forces": {
+      "USA": {
         "battleships": 8,
         "battleships-lost": 4,
         "cruisers": 8,
@@ -339,7 +339,7 @@
       "submarines": 16
     },
     "forces_data": {
-      "japanese-forces": {
+      "Japan": {
         "carriers": 4,
         "carriers-lost": 4,
         "battleships": 2,
@@ -354,7 +354,7 @@
         "pow": 37,
         "casualties": 3094
       },
-      "american-forces": {
+      "USA": {
         "carriers": 3,
         "carriers-lost": 1,
         "heavy-cruisers": 7,
@@ -390,7 +390,7 @@
       "casualties": 1129619
     },
     "forces_data": {
-      "axis-forces": {
+      "Axis": {
         "countries": [
           "Germany",
           "Italy",
@@ -408,7 +408,7 @@
         "weapons-captured": 5762,
         "casualties": 868374
       },
-      "soviet-forces": {
+      "Russia": {
         "aircraft": 1415,
         "tanks": 1294,
         "artillery": 15651,
@@ -439,7 +439,7 @@
       "casualties": 11014
     },
     "forces_data": {
-      "allied-forces": {
+      "Allies": {
         "countries": [
           "United Kingdom",
           "United States",
@@ -460,7 +460,7 @@
         "wounded": 6700,
         "casualties": 11014
       },
-      "german-forces": {
+      "Germany": {
         "divisons": 4,
         "soldiers": 40000,
         "aircraft": 815,
@@ -486,7 +486,7 @@
       "casualties": 81834
     },
     "forces_data": {
-      "german-forces": {
+      "Germany": {
         "divisions": 43,
         "tanks": 2014,
         "artillery": 4224,
@@ -496,7 +496,7 @@
         "mia": 30582,
         "casualties": 81834
       },
-      "american-forces": {
+      "USA": {
         "divisions": 32,
         "tanks": 4428,
         "artillery": 3181,
@@ -506,7 +506,7 @@
         "mia": 23000,
         "casualties": 89500
       },
-      "british-forces": {
+      "Britain": {
         "soldiers": 111100,
         "kia": 200,
         "wounded": 1200,

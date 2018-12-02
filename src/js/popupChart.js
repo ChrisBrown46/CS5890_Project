@@ -59,7 +59,7 @@ class PopupChart {
     this.selectBox = this.chartDiv.append("select").node();
     this.selectBox.onchange = () => this.updateBars();
     
-    this.selectBox.hidden = true;
+    // this.selectBox.hidden = true;
 
     this.chartSvg = this.chartDiv.append("svg")
       .attr("id", `chart${chartNumber}`)
@@ -100,7 +100,10 @@ class PopupChart {
       .attr("x", this.width * 0.2)
       .attr("y", this.height * -0.6)
       .attr("transform", "scale(1,-1)")
-      .attr("hidden", "true");
+      .attr("hidden", "true")
+      .style("fill", "white");
+
+    
 
     this.update(1)
     this.configureOptions();
