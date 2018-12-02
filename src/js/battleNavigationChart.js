@@ -1,6 +1,6 @@
 class BattleNavigationChart {
 
-  constructor(battleData, worldMap) {
+  constructor(battleData) {
     this.battleData = battleData;
     this.trimmedBattleData = battleData.slice(0, -1);
     this.worldMap = worldMap;
