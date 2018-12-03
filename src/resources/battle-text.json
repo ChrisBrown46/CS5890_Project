@@ -1,5 +1,12 @@
 [
   {
+    "battle": "Introduction (1939)",
+    "text": [
+      "World War II was a global war that lasted from 1939 to 1945. The vast majority of the world's countries—including all the great powers—eventually formed two opposing military alliances: the Allies and the Axis. A state of total war emerged, directly involving more than 100 million people from over 30 countries. The major participants threw their entire economic, industrial, and scientific capabilities behind the war effort, blurring the distinction between civilian and military resources.",
+      "World War II was the deadliest conflict in human history, marked by 50 to 85 million fatalities, most of whom were civilians in the Soviet Union and China. It included massacres, the genocide of the Holocaust, strategic bombing, premeditated death from starvation and disease, and the only use of nuclear weapons in war."
+    ]
+  },
+  {
     "battle": "Invasion of Poland (1939)",
     "text": [
       "German Leader Adolf Hitler understood that his overall conquest of Europe relied on neutralizing Poland in the East, gaining a non-aggression assurance from the Soviets and preparing for battle against Britain and France in the West. From there, the final push would be against its one-time ally in the Soviet Union giving Hitler's Reich all of the slave manpower, agricultural resources and natural resources that it required.",
@@ -9,7 +16,7 @@
     ]
   },
   {
-    "battle": "Battle of the Atlantic",
+    "battle": "Battle of the Atlantic (1939)",
     "text": [
       "The Battle of the Atlantic is one of the most overlooked battlegrounds of World War 2 but it proved no less important for control of vital shipping lanes between North America and Europe. The German U-boat scourge was one of the more deadlier components of the German war machine, a component utilized in World War 1 as well. The U-boat became the greatest threat to merchantmen traversing the long, open causeways of the Atlantic Ocean for most of the war.",
       "The Battle of the Atlantic was not a single event, but rather a constant struggle between Germany and the Allies. In September 1939, German U-boats began their attacks on Allied watercraft, attacking military and merchant vessels alike.",
@@ -18,21 +25,21 @@
     ]
   },
   {
-    "battle": "Dunkirk",
+    "battle": "Dunkirk (1940)",
     "text": [
       "After seeing the fall of Poland, Holland, and Belgium to German forces, French and British forces began congregating at the French port city of Dunkirk. Sensing total annihilation of Allied forces, British Prime Minister Winston Churchill ordered a flotilla of civilian ships to help shuttle troops from impending doom at the hands of the German army. The effort would become one of epic proportions as over 338,000 Allied troops were rescued from certain death in what would become known as the 'Miracle at Dunkirk'.",
       "Despite this effort, Allied forces at Dunkirk were not without their losses. A final French Army stand at Dunkirk netted the Germans some 40,000 French soldiers as Prisoners of War while thousands of vehicles, artillery pieces and small arms were captured - delivering yet another blow to Allied military firepower. The Germans would eventually take the port city under their control and end the stand once and for all. Despite the defeat in Europe, the survivors would live to fight another day. The event laid the groundwork for the next phase of Hitler's plans - the invasion of Britain itself."
     ]
   },
   {
-    "battle": "Battle of Britain",
+    "battle": "Battle of Britain (1940)",
     "text": [
       "After the fall of most of mainland Europe, the German military machine moved its attention onto Great Britain. In preparation for a ground invasion of the island, formally known as Operation Sea Lion, German warplanners recognized that air superiority would have to be earned against the British Royal Air Force (RAF). Less than three weeks after the Fall of France, the German Luftwaffe went to work against this seasoned group of aviators. Against 3,358 aircraft (including 1,223 fighters, 1,482 bombers and 327 dive bombers) fielded by the Germans, the British managed just 1,963 total aircraft - primarily 903 of which were single-two-seat fighter types - 560 bombers and 500 coastal-minded aircraft. The Hawker Hurricane and Supermarine Spitfire became  stars of the British cause during the battle, facing off against the equally stellar German Messerschmitt Bf 109 fighter.",
       "Aided by its intelligence network and growing proficiency with radar, the British managed to hold steady despite daily attacks against both military and civilian populations. Feeling that Britain could be contained and do no serious damage from its now-weakened position, Hitler postponed Operation Sea Lion indefinitely and moved his thoughts to his true master plan - the invasion of the Soviet Union. In the end, The Luftwaffe lost 1,887 aircraft to the enemy's 1,547 (including 56 alone on September 15th) with 2,698 aircrew dead against the British 544."
     ]
   },
   {
-    "battle": "Operation Barbarossa",
+    "battle": "Operation Barbarossa (1941)",
     "text": [
       "In accordance with Hitler's grand vision, the Soviet Union and its varied peoples were to be subdued if a new 'German Empire' was to be realized. The captured lands would serve to feed Army advances and slave labor would provide Germany with the necessary manpower for victory and a long-standing existence after the war.",
       "On June 22nd, 1941, Operation Barbarossa was launched to begin the East Front - the German invasion of the Soviet Union. The invasion plans were optimistic: through surprise, strength, and optimizations of the 'blitzkrieg', it was thought that Axis forces could reach and capture the Soviet capital of Moscow in little more than eight weeks.",
@@ -41,7 +48,7 @@
     ]
   },
   {
-    "battle": "Battle of Moscow",
+    "battle": "Battle of Moscow (1941)",
     "text": [
       "In the aftermath of Operation Barbarossa, the continued German encirclement of Soviet forces had cost nearly 4 million Soviet lives. By early October, the Germans had advanced to within 200 miles of Moscow. Germany needed to end the War in the East soon, so they began Operation Typhoon to sieze the Soviet capital.",
       "The initial phase of Typhoon went according to plan, with four Soviet armies and more than 500,000 Soviet soldiers killed or captured at Vyazma alone. With proper supply and good weather, the Germans could probably have capitalized on this momentum and conquered all of Russia. Alas, neither condition would prove true.",
@@ -50,7 +57,7 @@
     ]
   },
   {
-    "battle": "Pearl Harbor",
+    "battle": "Pearl Harbor (1941)",
     "text": [
       "On the other side of the planet, Japan was preparing to assert its colonial dominance in the Pacific. In order to do so, the threat of the American Navy centralized in Pearl Harbor in the Hawaiian Islands would have to be neutralized.",
       "Before the assault on Pearl, the Japanese had worked hard at developing the tools for the Imperial Japanese Navy to get the job done. The Japanese Navy was gifted ships built to specifications beyond those imposed on the world's navies after World War 1. Aircraft were now attached to floating carrier ships and made just as lethal as their land counterparts.",
@@ -59,14 +66,14 @@
     ]
   },
   {
-    "battle": "Battle of Midway",
+    "battle": "Battle of Midway (1942)",
     "text": [
       "The Battle of Midway was an early key naval battle in the Pacific Theater between the forces of the United States Navy (USN) and the Empire of Japan. Japan was keen on knocking out the remaining American carriers by luring them into a complicated trap - this to include a diversionary invasion of the Alaskan Aleutian Islands in the north. This would force the American carriers out of Pearl for the  final deathblow. A Japanese victory would then secure their sphere of influence in the Pacific and help close the range on other targeted islands. Unbeknownst to the Japanese Empire, American intelligence had intercepted and deciphered these plans, and secretly set up a counter-ambush. Still weak from Pearl Harbor, this element of surprise gave the American Navy the leverage it needed to combat the Japanese forces.",
       "In the end, the Japanese operation was a terrible failure - four key carriers were lost along with thousands of personnel including irreplaceable and experienced airmen and aircraft. American actions during the Midway Campaign ensured their own respective presence in the Pacific Theater would be solidified by the event. For the Japanese military, it had now witnessed its peak as an unstoppable fighting force - and it now faced the very real possibility of defeat with a war inching its way to Tokyo itself."      
     ]
   },
   {
-    "battle": "Battle of Stalingrad",
+    "battle": "Battle of Stalingrad (1942)",
     "text": [
       "Besieged by the German 6th Army the strategic Soviet city held out with minimal supplies and a dwindling band of defenders of the 62nd Army. German propaganda, based on the grand thrusts into and around Stalingrad, were already proclaiming victory for the German Army. Soldiers and supplies were pouring to the 6th Army to make sure the assault went Germany's way, and German General Paulus was the man in charge.",
       "On the other side, Soviet Marshal Zhukov was planning his counteroffensive to help alleviate his beleaguered Stalingrad defenders. Zhukov prepared his massive ground force a short distance away, committing whatever important elements came his way to the assault to come.",
@@ -75,7 +82,7 @@
     ]
   },
   {
-    "battle": "D-Day",
+    "battle": "D-Day (1944)",
     "text": [
       "It was no secret to both sides of the war in Europe that France would be the ultimate battleground for turning the tide in either party's favor. Germany was entrenched in a bloody struggle to the East against the might of the Red Army, having a hard time replacing their mounting losses in the process. They were losing ground in Italy after having lost their hold in North Africa altogether. But in the north of France, the Germans maintained a relatively easily accessible route to the North Sea. Should any invasion stem from English shores, the German Army would indeed be ready.",
       "While German authorities were convinced that the invasion of Europe would come from England herself, they mistakenly agreed that the most logical point would be in the region of Pas de Calais - the shortest jaunt from English shores to France. As such, defenses in this area were heightened. In truth, the Allied invasion force was amassing to the south of England. Along its shores were thousands of naval vessels ready to sail the choppy and unforgiving North Sea into France. Weather played a major role in preparations and only two days were afforded for the massive invasion plan - May 17th and June 5th. The former was cancelled on account of bad weather. Likewise, bad weather forced the latter to be postponed 24 hours, resulting in the date of June 6th, 1944 - the 'Day of Days' - to be the deciding moment, forever to be encapsulated to history as 'D-Day'.",
@@ -84,7 +91,7 @@
     ]
   },
   {
-    "battle": "Battle of the Bulge",
+    "battle": "Battle of the Bulge (1944)",
     "text": [
       "By the end of 1944, the Allied advance across Europe was such that the front was held in check at its ends by two large armies - the Canadians and English to the North and the Americans and General Patton to the south. In between the two concentrated forces lay a thin line of some 80,000 Allied troops. The reason for this thin grouping of support was largely explained by its location, this in the thick of the seemingly impenetrable Ardennes Forest. It was a long-held belief that the area was ill-suited for any sort of open warfare and the Allies utilized this feeling and the surrounding terrain to concentrate critical forces to the fighting elsewhere along the Front.",
       "However, Hitler had developed other plans when constructing his Ardennes Offensive, and his surprise was unveiled on December 16th, 1944 when the German Army opened up in one of their largest displays of artillery bombardment ever. Mechanized forces of the German 5th and 15th Panzer armies, as well as the 6th SS and 7th Army, attacked the US VIII forces in a line between Aachen and Bastogne. The German surprise held up well and the Allies reeled at the advance, however, some contingents held their ground. The last German blitzkrieg was underway as a grand total of 200,000 German personnel were mustered into a singular fighting force, encompassing both battle-hardened troops such as those of the Waffen-SS and non-combatants from across the German territories.",

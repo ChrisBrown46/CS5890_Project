@@ -64,17 +64,6 @@ class PopupChart {
       .attr("class", "select")
       .append("select").node();
     this.selectBox.onchange = () => this.updateBars();
-    
-
-    this.chartSvg = this.chartDiv
-      .append("svg")
-      .attr("id", `chart${chartNumber}`)
-      .attr("width", "100%")
-      .attr("height", "100%");
-
-    this.popup = this.chartSvg
-      .append("g")
-      .attr("transform", `scale(1, -1) translate(0, -${this.height})`);
 
     for (const option of options) {
       const newOption = document.createElement("option");
@@ -120,7 +109,6 @@ class PopupChart {
       .attr("class", "tooltip")				
       .style("opacity", 0);
     
-
     this.update(1)
   }
 
