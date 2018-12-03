@@ -56,10 +56,12 @@ class PopupChart {
     this.dimensions = this.chartDiv.node().getBoundingClientRect();
     this.height = parseFloat(this.dimensions.height);
     this.width = parseFloat(this.dimensions.width);
-    this.selectBox = this.chartDiv.append("select").node();
+
+    this.selectBox = this.chartDiv.append("div")
+      .attr("class", "select")
+      .append("select").node();
     this.selectBox.onchange = () => this.updateBars();
     
-    this.selectBox.hidden = true;
 
     this.chartSvg = this.chartDiv.append("svg")
       .attr("id", `chart${chartNumber}`)
@@ -75,6 +77,9 @@ class PopupChart {
       newOption.value = option;
       this.selectBox.add(newOption);
     }
+
+    this.defaultOption = this.selectBox.options[9];
+    this.defaultOption.setAttribute("id", `default${chartNumber}`);
 
     // Initialize the Y-axis line
     this.popupY = this.popup
@@ -109,11 +114,12 @@ class PopupChart {
     
 
     this.update(1)
-    this.configureOptions();
   }
 
-  update(battleNumber){
+  update(battleNumber, direction){
+    if (direction === "up" && battleNumber !== 1) battleNumber -= 1;
     this.currentBattle = this.battleData[battleNumber - 1];
+    this.popup.selectAll("text.label").remove();
     this.configureOptions();
     this.updateBars();
   }
@@ -121,10 +127,16 @@ class PopupChart {
   updateBars(){
     // First figure out which attribute has been selected.
     this.currentAttribute = this.selectBox.options[this.selectBox.selectedIndex].value;
+    
 
     // Then see if there is data for this category for the currently selected battle and behave accordingly:
 
     let categoryDomain = this.currentBattle.categories[this.currentAttribute];
+    if(categoryDomain === undefined) {
+      this.currentAttribute = "casualties";
+      categoryDomain = this.currentBattle.categories[this.currentAttribute];
+      $(`#default${this.chartNumber}`).prop('selected', true);
+    }
     if(categoryDomain != undefined){
       this.popupX.attr("hidden", null);
       this.popupY.attr("hidden", null);
@@ -177,17 +189,17 @@ class PopupChart {
         .attr("transform", "scale(1, -1)")
         .style("color", "white")
         .attr("class", "label")
-        .on("mouseover", d => {
-          this.tooltipDiv.style("opacity", .9);
-          let tooltipHtml = d.val;
-          if(d.val === 0) tooltipHtml = "No data!";
-          this.tooltipDiv.html(tooltipHtml)
-            .style("left", (d3.event.pageX) + "px")
-            .style("top", (d3.event.pageY - 28) + "px");
-        })
-        .on("mouseout", d => {
-          this.tooltipDiv.style("opacity", 0);
-        })
+        // .on("mouseover", d => {
+        //   this.tooltipDiv.style("opacity", .9);
+        //   let tooltipHtml = d.val;
+        //   if(d.val === 0) tooltipHtml = "No data!";
+        //   this.tooltipDiv.html(tooltipHtml)
+        //     .style("left", (d3.event.pageX) + "px")
+        //     .style("top", (d3.event.pageY - 28) + "px");
+        // })
+        // .on("mouseout", d => {
+        //   this.tooltipDiv.style("opacity", 0);
+        // })
 
       let yAxis = d3.axisLeft(yAxisScale);
 
