@@ -1,4 +1,4 @@
-let options = [
+const options = [
   "aircraft",
   "aircraft-damaged",
   "aircraft-lost",
@@ -42,16 +42,19 @@ let options = [
   "weapons-captured",
   "weapons-lost",
   "wounded"
-]
+];
 
 class PopupChart {
 
   constructor(battleData, chartNumber) {
     this.battleData = battleData;
+
     this.currentAttribute = "aircraft";
     this.currentBattle = null;
-    this.chartNumber = chartNumber;
     // this.currentBattle = this.battleData[0];
+
+    this.chartNumber = chartNumber;
+
     this.chartDiv = d3.select(`div#chartDiv${chartNumber}`);
     this.dimensions = this.chartDiv.node().getBoundingClientRect();
     this.height = parseFloat(this.dimensions.height);
@@ -63,16 +66,18 @@ class PopupChart {
     this.selectBox.onchange = () => this.updateBars();
     
 
-    this.chartSvg = this.chartDiv.append("svg")
+    this.chartSvg = this.chartDiv
+      .append("svg")
       .attr("id", `chart${chartNumber}`)
       .attr("width", "100%")
       .attr("height", "100%");
 
-    this.popup = this.chartSvg.append("g")
+    this.popup = this.chartSvg
+      .append("g")
       .attr("transform", `scale(1, -1) translate(0, -${this.height})`);
 
-    for (let option of options){
-      let newOption = document.createElement("option");
+    for (const option of options) {
+      const newOption = document.createElement("option");
       newOption.text = option;
       newOption.value = option;
       this.selectBox.add(newOption);
@@ -100,7 +105,8 @@ class PopupChart {
       .attr("class", "axis-line");
 
     // Initialize the "no data found" text
-    this.noDataText = this.popup.append("text")
+    this.noDataText = this.popup
+      .append("text")
       .text("No data found!")
       .attr("x", this.width * 0.2)
       .attr("y", this.height * -0.6)
@@ -108,7 +114,9 @@ class PopupChart {
       .attr("hidden", "true")
       .style("fill", "white");
 
-    this.tooltipDiv = d3.select("body").append("div")	
+    this.tooltipDiv = d3
+      .select("body")
+      .append("div")	
       .attr("class", "tooltip")				
       .style("opacity", 0);
     
@@ -130,7 +138,6 @@ class PopupChart {
     
 
     // Then see if there is data for this category for the currently selected battle and behave accordingly:
-
     let categoryDomain = this.currentBattle.categories[this.currentAttribute];
     if(categoryDomain === undefined) {
       this.currentAttribute = "casualties";
@@ -189,17 +196,17 @@ class PopupChart {
         .attr("transform", "scale(1, -1)")
         .style("color", "white")
         .attr("class", "label")
-        // .on("mouseover", d => {
-        //   this.tooltipDiv.style("opacity", .9);
-        //   let tooltipHtml = d.val;
-        //   if(d.val === 0) tooltipHtml = "No data!";
-        //   this.tooltipDiv.html(tooltipHtml)
-        //     .style("left", (d3.event.pageX) + "px")
-        //     .style("top", (d3.event.pageY - 28) + "px");
-        // })
-        // .on("mouseout", d => {
-        //   this.tooltipDiv.style("opacity", 0);
-        // })
+        .on("mouseover", d => {
+          this.tooltipDiv.style("opacity", .9);
+          let tooltipHtml = d.val;
+          if(d.val === 0) tooltipHtml = "No data!";
+          this.tooltipDiv.html(tooltipHtml)
+            .style("left", (d3.event.pageX) + "px")
+            .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", d => {
+          this.tooltipDiv.style("opacity", 0);
+        })
 
       let yAxis = d3.axisLeft(yAxisScale);
 
@@ -223,6 +230,8 @@ class PopupChart {
       this.popupY.attr("hidden", "true");
       this.noDataText.attr("hidden", null);
       this.chartSvg.selectAll("g.yAxis").remove();
+
+      return;
     }
   }
 

@@ -22,7 +22,13 @@ class WorldMap {
       .attr("transform", "translate(5, 150) scale(1.395, 1.395)");
   }
 
-  updateMap(index) {
+  update(battleNumber, textPosition, direction) {
+    battleNumber -= 1;
+    if (textPosition !== 1) return;
+
+    if (direction === "up")
+      battleNumber -= 1;
+    
     const transformMap = {
       0: "translate(-7200, -950) scale(15, 15)",
       1: "translate(-900, -150) scale(4, 4)",
@@ -43,13 +49,13 @@ class WorldMap {
       .ease(d3.easePolyOut)
       .attr("transform", "translate(5, 150) scale(1.395, 1.395)");
 
-    if (index < 11)
+    if (battleNumber < 11)
       this.svg
         .transition()
         .delay(2500)
         .duration(2500)
         .ease(d3.easeSinInOut)
-        .attr("transform", transformMap[index]);
+        .attr("transform", transformMap[battleNumber]);
   }
 
   updateSides() {
@@ -86,9 +92,5 @@ class WorldMap {
       .attr("class", "countries");
 
     this.updateSides();
-  }
-
-  update(battleNumber, textPosition, direction) {
-    // TODO
   }
 }
