@@ -9,11 +9,11 @@ function buildBattle(battleNavigationChart, worldMap, popupChart1, popupChart2, 
       handler: function(direction) {
         battleNavigationChart.update(battleNumber, percent, direction);
         worldMap.update(battleNumber, percent, direction);
-        popupChart1.update(battleNumber);
+        popupChart1.update(battleNumber, direction);
         // popupChart1.update(battleNumber, percent, direction);
-        popupChart2.update(battleNumber);
+        popupChart2.update(battleNumber, direction);
         // popupChart2.update(battleNumber, percent, direction);
-        popupChart3.update(battleNumber);
+        popupChart3.update(battleNumber, direction);
         // popupChart3.update(battleNumber, percent, direction);
       },
       context: document.getElementById("story"),
