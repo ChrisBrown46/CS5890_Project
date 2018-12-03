@@ -483,7 +483,7 @@
       "kia": 19000,
       "wounded": 50000,
       "mia": 30582,
-      "casualties": 81834
+      "casualties": 90000
     },
     "forces_data": {
       "Germany": {
@@ -518,6 +518,40 @@
     "battle": "Conclusion",
     "start-date": "September 2nd, 1945",
     "end-date": "September 2nd, 1945",
-    "description": "World War 2 left no part of the world untouched - North America, South America, Europe, Asia, Africa and all oceans between were involved to one extent or the other. While the conflict gave rise to legends and led to the fall of others, the true cost of the war lay in the human commitment: scores of souls were affected by the events that led up to - and consisted of - the war between the Allies and the Axis. Before the end, individual stories (some surviving) were largely lost,  the grand scope of the Second World War more simply summarized through numbers - such was the destructive force of the conflict that spanned half-a-decade."
+    "description": "World War 2 left no part of the world untouched - North America, South America, Europe, Asia, Africa and all oceans between were involved to one extent or the other. While the conflict gave rise to legends and led to the fall of others, the true cost of the war lay in the human commitment: scores of souls were affected by the events that led up to - and consisted of - the war between the Allies and the Axis. Before the end, individual stories (some surviving) were largely lost,  the grand scope of the Second World War more simply summarized through numbers - such was the destructive force of the conflict that spanned half-a-decade.",
+    "categories": {
+      "casualties": 10000000,
+      "civilian-casualties": 18000000,
+      "aircraft": 500000,
+      "tanks": 125000,
+      "warships": 2500,
+      "artillery": 550000
+    },
+    "forces_data": {
+      "Axis": {
+        "casualties": 7972200,
+        "civilian-casualties": 2760000,
+        "aircraft": 266300,
+        "tanks": 49375,
+        "warships": 1679,
+        "artillery": 180550
+      },
+      "Allies": {
+        "casualties": 6187400,
+        "civilian-casualties": 17937700,
+        "aircraft": 478945,
+        "tanks": 124565,
+        "warships": 2472,
+        "artillery": 398615
+      },
+      "Russia": {
+        "casualties": 9750000,
+        "civilian-casualties": 13204000,
+        "aircraft": 157000,
+        "tanks": 105250,
+        "warships": 79,
+        "artillery": 517000
+      }
+    }
   }
 ]
