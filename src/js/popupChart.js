@@ -65,7 +65,6 @@ class PopupChart {
       .append("select").node();
     this.selectBox.onchange = () => this.updateBars();
     
-
     this.chartSvg = this.chartDiv
       .append("svg")
       .attr("id", `chart${chartNumber}`)
