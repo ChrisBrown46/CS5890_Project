@@ -64,16 +64,6 @@ class PopupChart {
       .attr("class", "select")
       .append("select").node();
     this.selectBox.onchange = () => this.updateBars();
-    
-    this.chartSvg = this.chartDiv
-      .append("svg")
-      .attr("id", `chart${chartNumber}`)
-      .attr("width", "100%")
-      .attr("height", "100%");
-
-    this.popup = this.chartSvg
-      .append("g")
-      .attr("transform", `scale(1, -1) translate(0, -${this.height})`);
 
     for (const option of options) {
       const newOption = document.createElement("option");
@@ -119,7 +109,6 @@ class PopupChart {
       .attr("class", "tooltip")				
       .style("opacity", 0);
     
-
     this.update(1)
   }
 
@@ -127,6 +116,7 @@ class PopupChart {
     if (direction === "up" && battleNumber !== 1) battleNumber -= 1;
     this.currentBattle = this.battleData[battleNumber - 1];
     this.popup.selectAll("text.label").remove();
+    this.popup.selectAll("rect").remove();
     this.configureOptions();
     this.updateBars();
   }
@@ -147,9 +137,7 @@ class PopupChart {
       this.popupX.attr("hidden", null);
       this.popupY.attr("hidden", null);
       this.noDataText.attr("hidden", "true");
-      this.popup.selectAll("rect").remove();
       this.chartSvg.selectAll("g.yAxis").remove();
-
       let chartData = [];
 
       for (const force in this.currentBattle.forces_data) {
@@ -172,17 +160,19 @@ class PopupChart {
 
       let barWidth = this.width * 0.75 / chartData.length;
 
-      this.popup
-        .selectAll("rect")
+      this.popup.selectAll("rect")
         .data(chartData)
         .enter()
         .append("rect")
         .attr("x", (_, i) => i * barWidth + this.width * 0.2)
         .attr("y", this.height * 0.15)
         .attr("val", d => d.val)
-        .attr("height", d => yScale(d.val))
         .attr("class", d => `bar${d.name}`)
-        .attr("width", () => barWidth - 3);
+        .attr("width", () => barWidth - 3)
+      
+      this.popup.selectAll("rect").transition()
+        .duration(500)
+        .attr("height", d => yScale(d.val));
       
       this.popup
         .selectAll("text.label")
