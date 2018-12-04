@@ -59,7 +59,7 @@ class WorldMap {
       .ease(d3.easePolyOut)
       .attr("transform", "translate(5, 150) scale(1.395, 1.395)");
 
-    if (battleNumber < 11)
+    if (battleNumber < 12)
       this.svg
         .transition()
         .delay(2500)

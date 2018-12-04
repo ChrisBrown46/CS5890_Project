@@ -86,7 +86,6 @@ class BattleNavigationChart {
     circleBattleChart
       .append("a")
       .attr("href", (_, i) => "#battle-" + (i + 1))
-      .on("click", (_, i) => this.worldMap.updateMap(i))
       .append("circle")
       .attr("cx", (_, i) => scale(i))
       .attr("r", 25)
