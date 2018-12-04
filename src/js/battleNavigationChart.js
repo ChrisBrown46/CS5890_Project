@@ -12,7 +12,7 @@ class BattleNavigationChart {
     // Fetch the svg bounds
     this.svgBounds = divBattleChart.node().getBoundingClientRect();
     this.svgWidth = this.svgBounds.width - this.margin.left - this.margin.right;
-    this.svgHeight = 100;
+    this.svgHeight = 120;
 
     // Add the svg to the div
     this.svg = divBattleChart.append("svg")
@@ -29,6 +29,26 @@ class BattleNavigationChart {
     const scale = d3.scaleLinear()
       .domain([0, this.battleData.length + 1])
       .range([0, this.svgWidth]);
+
+    // Create Battle Text
+    const battleText = this.svg
+      .selectAll("text")
+      .data(this.battleData)
+      .enter();
+    battleText
+      .append("text")
+      .attr("x", (_, i) => scale(i) - 1)
+      .attr("y", -35)
+      .attr("class", "text")
+      .attr("text-anchor", "middle")
+      .html(d => d.year);
+    battleText
+      .append("text")
+      .attr("x", (_, i) => scale(i) - 1)
+      .attr("y", 50)
+      .attr("class", "text")
+      .attr("text-anchor", "middle")
+      .html(d => d.short);
 
     // Create Battle Chart
     const rectBattleChart = this.svg

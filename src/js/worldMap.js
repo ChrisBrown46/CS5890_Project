@@ -30,18 +30,28 @@ class WorldMap {
       battleNumber -= 1;
     
     const transformMap = {
-      0: "translate(-7200, -950) scale(15, 15)",
-      1: "translate(-900, -150) scale(4, 4)",
-      2: "translate(-6700, -1050) scale(15, 15)",
-      3: "translate(-6500, -800) scale(15, 15)",
-      4: "translate(-4800, -500) scale(10, 10)",
-      5: "translate(-5000, -375) scale(10, 10)",
-      6: "translate(-500, -3500) scale(20, 20)",
-      7: "translate(-2050, -340) scale(3, 3)",
-      8: "translate(-5000, -375) scale(10, 10)",
-      9: "translate(-11400, -2070) scale(25, 25)",
-      10: "translate(-6700, -1050) scale(15, 15)"
+      0: "translate(5, 150) scale(1.395, 1.395)",
+      1: "translate(-7200, -950) scale(15, 15)",
+      2: "translate(-900, -150) scale(4, 4)",
+      3: "translate(-6700, -1050) scale(15, 15)",
+      4: "translate(-6500, -800) scale(15, 15)",
+      5: "translate(-4800, -500) scale(10, 10)",
+      6: "translate(-5000, -375) scale(10, 10)",
+      7: "translate(-500, -3500) scale(20, 20)",
+      8: "translate(-2050, -340) scale(3, 3)",
+      9: "translate(-5000, -375) scale(10, 10)",
+      10: "translate(-11400, -2070) scale(25, 25)",
+      11: "translate(-6700, -1050) scale(15, 15)"
     };
+
+    if (battleNumber < 2) {
+      this.svg
+        .transition()
+        .duration(2500)
+        .ease(d3.easeSinInOut)
+        .attr("transform", transformMap[battleNumber]);
+      return;
+    }
 
     this.svg
       .transition()
