@@ -79,7 +79,7 @@ div#story {
   color: white;
 }
 
-.h1 {
+p.h1 {
   padding-top: 30px;
   padding-bottom: 10px;
 }
@@ -137,6 +137,16 @@ div.inner {
   border: 1.75px double #2C2F33;
 }
 
+div.hidden {
+  position: absolute;
+  width: 13vw;
+  height: 13vw;
+  background: hsl(30, 1%, 30%);
+  opacity: 0;
+  left: 57vw;
+  border: 1.75px double #2C2F33;
+}
+
 text.label {
   fill: white;
   font-size: 10px;
@@ -144,9 +154,7 @@ text.label {
 
 div.tooltip {	
   position: absolute;			
-  text-align: center;			
-  /* width: 60px;					
-  height: 28px;					 */
+  text-align: center;
   padding: 2px;				
   font: 12px sans-serif;		
   background: lightsteelblue;	
@@ -158,4 +166,9 @@ div.tooltip {
 div.select {
   position: absolute;
   z-index: 2;
+}
+
+text.text {
+  fill: white;
+  font-size: 30;
 }

@@ -75,6 +75,17 @@ class PopupChart {
     this.defaultOption = this.selectBox.options[9];
     this.defaultOption.setAttribute("id", `default${chartNumber}`);
 
+    this.chartSvg = this.chartDiv
+      .append("svg")
+      .attr("id", `chart${chartNumber}`)
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .attr("height", "100%");
+
+    this.popup = this.chartSvg
+      .append("g")
+      .attr("transform", `scale(1, -1) translate(0, -${this.height})`);
+
     // Initialize the Y-axis line
     this.popupY = this.popup
       .append("line")
@@ -109,14 +120,30 @@ class PopupChart {
       .attr("class", "tooltip")				
       .style("opacity", 0);
     
-    this.update(1)
+    this.update(1, 1, "down");
   }
 
-  update(battleNumber, direction){
-    if (direction === "up" && battleNumber !== 1) battleNumber -= 1;
-    this.currentBattle = this.battleData[battleNumber - 1];
+  update(battleNumber, textPosition, direction){
+    battleNumber -= 1;
+    if (textPosition !== 1) return;
+
+    if (direction === "up")
+      battleNumber -= 1;
+
+    if (battleNumber === 0) {
+      this.chartDiv.classed("inner", false);
+      this.chartDiv.classed("hidden", true);
+    } else {
+      this.chartDiv.classed("hidden", false);
+      this.chartDiv.classed("inner", true);
+    }
+      
+    this.currentBattle = this.battleData[battleNumber];
     this.popup.selectAll("text.label").remove();
     this.popup.selectAll("rect").remove();
+
+    if (this.currentBattle === undefined) return;
+    if (this.currentBattle.categories === undefined) return;
     this.configureOptions();
     this.updateBars();
   }
@@ -128,7 +155,7 @@ class PopupChart {
 
     // Then see if there is data for this category for the currently selected battle and behave accordingly:
     let categoryDomain = this.currentBattle.categories[this.currentAttribute];
-    if(categoryDomain === undefined) {
+    if(categoryDomain === undefined || this.chartNumber === 1) {
       this.currentAttribute = "casualties";
       categoryDomain = this.currentBattle.categories[this.currentAttribute];
       $(`#default${this.chartNumber}`).prop('selected', true);
@@ -158,7 +185,7 @@ class PopupChart {
         .domain([0, categoryDomain])
         .range([this.height * 0.7, 0]);
 
-      let barWidth = this.width * 0.75 / chartData.length;
+      const barWidth = this.width * 0.75 / chartData.length;
 
       this.popup.selectAll("rect")
         .data(chartData)
@@ -225,8 +252,8 @@ class PopupChart {
   }
 
   configureOptions(){
-    for(let option of this.selectBox.options){
-      if(this.currentBattle.categories[option.value] === undefined) option.disabled = true;
+    for (const option of this.selectBox.options){
+      if (this.currentBattle.categories[option.value] === undefined) option.disabled = true;
       else option.disabled = false;
     }
   }
