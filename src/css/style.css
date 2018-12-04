@@ -18,13 +18,28 @@ body {
   height: 100%;
 }
 
+div#nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+
+  height: 3%;
+  width: 100%;
+  
+  border-bottom: 1px solid white;
+
+  background:  #24282C;
+  color: white;
+}
+
 div#battle-navigation-div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
 
-  height: 20%;
+  height: 17%;
   width: 100%;
   
   border-bottom: 5px solid white;
