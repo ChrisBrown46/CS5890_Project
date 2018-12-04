@@ -68,7 +68,7 @@ This is the same as weapons used but will be displayed at the end in a large for
 
 
 
-# Implementation
+# First Implementation
 1. BattleCasulties/WeaponsUsed Bar Charts: Our goal was to take the different bar charts suggested in the must-have section (battle casualties, weapons, etc.) and create a single bar chart within a div that allows the user to switch between categories using a select element.
 
 ![EmptyChart](./visualization_images/barchart_01.PNG)
@@ -95,8 +95,21 @@ Along with the above mentioned feature, we wanted a smooth transition in the vis
 (No great picture for these features.)
 We also used coloring to show users how far along they are with the story, what they have already read (or have skipped), and what is remaining. This can be seen in the first picture with the coloration (green = done, yellow = reading).
 
+# Second implementation
+![Timeline2](./visualization_images/year-battle-chart2.jpg)
+The intent of the timeline at the top is to provide chronological context to the other parts of the visualization. When scrolling through the story, it turns different colors to let the user know where they are in the timeline (green for completed, gray for not started, and yellow for in progress). Users can also click on a circle to make the rest of the visualization show the data for the battle it represents.
 
-# Evaluation
+![Barchart_01_2](./visualization_images/barchart_01_2.jpg)
+![Barchart_02_2](./visualization_images/barchart_02_2.jpg)
+![Barchart_03_2](./visualization_images/barchart_03_2.jpg)
+From our prototype, our individual, draggable bar chart evolved into 3 separate bar charts that the user can modify to display different datasets for each battle. None of these are draggable, but they are distinct and reactive such that each one can show a different dataset and they update automatically as the user scrolls. Each category is chosen from a dropdown of the attributes available for each battle. These were also left slightly translucent, so as to let the user see the map behind them.
+
+![Map-Color](./visualization_images/map-color.jpg)
+![Map-Zooming](./visualization_images/map-zooming.jpg)
+Map Chart: Our intent with this visualization was to help provide spatial context of the battles and allow the user to follow along where the battles were taking place.  Having the visualization zoom in and out of the battle locations helps the user keep track of where each battle happened.  We also color coded each country by what side they are on.
+
+
+# First Evaluation
 1. BattleCasulties/WeaponsUsed Bar Charts: At a very basic level, the visualization does what it is supposed to. It receives the data it needs and handles it correctly, building its components dynamically allowing for higher user interactivity regardless of which battle is being observed.
 
 One issue with the data that needs further exploration is the existence of outliers and null values for certain categories. For instance, in some battles only one side may have data on number of POW's taken or artillery used. Or in some cases, maybe one side may have roughly 3,000 soldiers lost compared to 100,000 lost by the other side. Having the data displayed in the bar chart the way it is now allows us to make decisions on whether we should display these outliers/categories or throw them out of the bar chart entirely.
@@ -113,6 +126,17 @@ There's still a fair amount of work that needs to be done for this part of the v
 The visualization works really well and is surprisingly fun to play with. It is intuitive to use and very responsive.
 Some improvements that are planned include: labels on the circle for battle names, different color scheme, and possibly a continous flow between circles instead of checkpoints.
 
+# Second evaluation
+Our insights about the data from the prototype were further enforced; the datasets for a lot of the battles were incomplete or otherwise faulty. However, implementing 3 separate bar charts as opposed to a single one made it easier to draw connections between different attributes for the same battle, i.e. soldier number and casualties, or opposing force size and casualties. As for how the visualization works, all of the separate pieces came together quite effectively through our good use of classes and abstraction. To further improve it, we could make the transitions on the bar charts and the map work in unison, and also find a way for the select boxes on each of the bar charts to only display the attributes for which the current battle has data. We could also look into labelling the countries, or changing the colors as the user scrolls to reflect when one force captures it.
+
+After out prototype, we took the feedback given by others and adjusted our design so that three visualizations appear on the right hand side of the map and are static. This was in line with our original design where we did not want any interaction from the user with the small visualizations because the user is already doing enough by having to scroll and navigate around the map.
+
+The map did not end up in the state we desired. We wanted to have battles appear as circles on the map so users could jump to the battles by clicking them or have them link to the navigation chart through highlighting corresponding battles.
+
+The navgiation chart ended in a good state. We added text around the circles to better describe what battles are occuring. It performed well and we managed to reach our stretch goals for it where scrolling was smooth in the scrolling area when circles were selected.
+
+Map Chart: There was not a lot that we learned from the map data, but it was interesting learning how the map transition zooming works. The visualization works well although the zooming can feel laggy when it zooms out and back in when the battle’s change.  We could further improve this visualization by adding more points on the map, maybe things like arrows showing the direction of battle and having the country names show up.
+
 # Project Schedule
 1. November 5th - Proposal finished.
   - Done!
@@ -121,6 +145,6 @@ Some improvements that are planned include: labels on the circle for battle name
 3. November 19th - HTML finished along with JavaScript classes' skeletons.
   - Done!
 4. November 26th - Text portion finished with the 3 major visualizations finished.
-  - Text done. Navigation visualization nearly finished, other two visualizations require more extensive work.
+  - Done!
 5. November 30th - Completed to specifications.
-  - More work required.
+  - Not Done!
